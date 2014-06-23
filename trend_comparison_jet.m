@@ -4,7 +4,7 @@
 % Windstress Timeseries
 %
 % Jordan Thomas
-% May 8, 2014
+% June 23, 2014
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Good Matlab Housekeeping
