@@ -50,8 +50,6 @@ load piControlData/CMCC_CESM/cmcc_cesm_taux.mat
 % set(gca, 'fontsize', 12)
 
 %% Create Useful time vectors
-
-
 time_year = 1:277;
 
 %% Create lat and lon vectors 
