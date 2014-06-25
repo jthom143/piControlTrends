@@ -4,11 +4,8 @@
 % Windstress Timeseries
 %
 % Jordan Thomas
-<<<<<<< HEAD
-% May 8, 2014
-=======
 % June 23, 2014
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Good Matlab Housekeeping
@@ -16,7 +13,6 @@
 close all
 clear all
 
-<<<<<<< HEAD
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis1
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
 % addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
@@ -24,39 +20,13 @@ clear all
 addpath /home/jthom143/Tools/Functions
 addpath /home/jthom143/NCEPReanalysis1
 addpath /home/jthom143/NCEPReanalysis2
+addpath /data1/fesd1/jthom143/piControlTrends/windstress_analysis
 
-%% Trend Analysis
-
-% CCSM4
- [ cmcc_cesm_jet_f     , cmcc_cesm_jet_xi     , cmcc_cesm_mean_jet     , cmcc_cesm_std_jet     , cmcc_cesm_jet_trends_yrs    , cmcc_cesm_jet_loc_f         , cmcc_cesm_jet_loc_xi        , cmcc_cesm_mean_jet_loc    , cmcc_cesm_std_jet_loc    , cmcc_cesm_jet_loc_trends_yrs    , cmcc_cesm_time_year     ] = CMCC_CESM_taux;
- [ cmcc_cm_jet_f       , cmcc_cm_jet_xi       , cmcc_cm_mean_jet       , cmcc_cm_std_jet       , cmcc_cm_jet_trends_yrs      , cmcc_cm_jet_loc_f           , cmcc_cm_jet_loc_xi          , cmcc_cm_mean_jet_loc      , cmcc_cm_std_jet_loc      , cmcc_cm_jet_loc_trends_yrs      , cmcc_cm_time_year       ] = CMCC_CM_taux;
- [ cmcc_cms_jet_f      , cmcc_cms_jet_xi      , cmcc_cms_mean_jet      , cmcc_cms_std_jet      , cmcc_cms_jet_trends_yrs     , cmcc_cms_jet_loc_f          , cmcc_cms_jet_loc_xi         , cmcc_cms_mean_jet_loc     , cmcc_cms_std_jet_loc     , cmcc_cms_jet_loc_trends_yrs     , cmcc_cms_time_year      ] = CMCC_CMs_taux;
-% CNRM CM5
-% CNRM CM5-2
- [ ipsl_cm5a_lr_jet_f  , ipsl_cm5a_lr_jet_x   , ipsl_cm5a_lr_mean_jet  , ipsl_cm5a_lr_std_jet  , ipsl_cm5a_lr_jet_trends_yrs , ipsl_cm5a_lr_jet_loc_f      , ipsl_cm5a_lr_jet_loc_xi     , ipsl_cm5a_lr_mean_jet_loc , ipsl_cm5a_lr_std_jet_loc , ipsl_cm5a_lr_jet_loc_trends_yrs , ipsl_cm5a_lr_time_year  ] = IPSL_CM5a_LR_taux;
- [ ipsl_cm5a_mr_jet_f  , ipsl_cm5a_mr_jet_xi  , ipsl_cm5a_mr_mean_jet  , ipsl_cm5a_mr_std_jet  , ipsl_cm5a_mr_jet_trends_yrs , ipsl_cm5a_mr_jet_loc_f      , ipsl_cm5a_mr_jet_loc_xi     , ipsl_cm5a_mr_mean_jet_loc , ipsl_cm5a_mr_std_jet_loc , ipsl_cm5a_mr_jet_loc_trends_yrs , ipsl_cm5a_mr_time_year  ] = IPSL_CM5a_MR_taux;
- [ ipsl_cm5b_lr_jet_f  , ipsl_cm5b_lr_jet_xi  , ipsl_cm5b_lr_mean_jet  , ipsl_cm5b_lr_std_jet  , ipsl_cm5b_lr_jet_trends_yrs , ipsl_cm5b_lr_jet_loc_f      , ipsl_cm5b_lr_jet_loc_xi     , ipsl_cm5b_lr_mean_jet_loc , ipsl_cm5b_lr_std_jet_loc , ipsl_cm5b_lr_jet_loc_trends_yrs , ipsl_cm5b_lr_time_year  ] = IPSL_CM5b_LR_taux;
- [ miroc_esm_jet_f     , miroc_esm_jet_xi     , miroc_esm_mean_jet     , miroc_esm_std_jet     , miroc_esm_jet_trends_yrs    , miroc_esm_jet_loc_f         , miroc_esm_jet_loc_xi        , miroc_esm_mean_jet_loc    , miroc_esm_std_jet_loc    , miroc_esm_jet_loc_trends_yrs    , miroc_esm_time_year     ] = MIROC_ESM_taux;
- [ miroc_esm_chem_jet_f  , miroc_esm_chem_jet_xi  , miroc_esm_chem_mean_jet  , miroc_esm_chem_std_jet  , miroc_esm_chem_jet_trends_yrs , miroc_esm_chem_jet_loc_f      , miroc_esm_chem_jet_loc_xi     , miroc_esm_chem_mean_jet_loc , miroc_esm_chem_std_jet_loc , miroc_esm_chem_jet_loc_trends_yrs , miroc_esm_chem_time_year  ] = MIROC_ESM_CHEM_taux;
-% MRI CGCM3
-% MPI ESM LR
-% MPI ESM MR
-% NOR ESM1m M
-% NOR ESM1m ME
-=======
-addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis1
-addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
-addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
-addpath /Users/jordanthomas/piControlTrends/windstress_analysis
-
-% addpath /home/jthom143/Tools/Functions
-% addpath /home/jthom143/NCEPReanalysis1
-% addpath /home/jthom143/NCEPReanalysis2
 
 %% Trend Analysis
 
 % CanESM2
-%[ ccsm4_jet_f           , ccsm4_jet_xi           , ccsm4_mean_jet           , ccsm4_std_jet           , ccsm4_jet_trends_yrs          , ccsm4_jet_loc_f               , ccsm4_jet_loc_xi              , ccsm4_mean_jet_loc          , ccsm4_std_jet_loc          , ccsm4_jet_loc_trends_yrs          , ccsm4_time_year           ] = CCSM4_taux;
+ [ ccsm4_jet_f           , ccsm4_jet_xi           , ccsm4_mean_jet           , ccsm4_std_jet           , ccsm4_jet_trends_yrs          , ccsm4_jet_loc_f               , ccsm4_jet_loc_xi              , ccsm4_mean_jet_loc          , ccsm4_std_jet_loc          , ccsm4_jet_loc_trends_yrs          , ccsm4_time_year           ] = CCSM4_taux;
  [ cmcc_cesm_jet_f       , cmcc_cesm_jet_xi       , cmcc_cesm_mean_jet       , cmcc_cesm_std_jet       , cmcc_cesm_jet_trends_yrs      , cmcc_cesm_jet_loc_f           , cmcc_cesm_jet_loc_xi          , cmcc_cesm_mean_jet_loc      , cmcc_cesm_std_jet_loc      , cmcc_cesm_jet_loc_trends_yrs      , cmcc_cesm_time_year       ] = CMCC_CESM_taux;
  [ cmcc_cm_jet_f         , cmcc_cm_jet_xi         , cmcc_cm_mean_jet         , cmcc_cm_std_jet         , cmcc_cm_jet_trends_yrs        , cmcc_cm_jet_loc_f             , cmcc_cm_jet_loc_xi            , cmcc_cm_mean_jet_loc        , cmcc_cm_std_jet_loc        , cmcc_cm_jet_loc_trends_yrs        , cmcc_cm_time_year         ] = CMCC_CM_taux;
  [ cmcc_cms_jet_f        , cmcc_cms_jet_xi        , cmcc_cms_mean_jet        , cmcc_cms_std_jet        , cmcc_cms_jet_trends_yrs       , cmcc_cms_jet_loc_f            , cmcc_cms_jet_loc_xi           , cmcc_cms_mean_jet_loc       , cmcc_cms_std_jet_loc       , cmcc_cms_jet_loc_trends_yrs       , cmcc_cms_time_year        ] = CMCC_CMs_taux;
@@ -75,16 +45,7 @@ addpath /Users/jordanthomas/piControlTrends/windstress_analysis
 %[ miroc5_jet_f          , miroc5_jet_xi          , miroc5_mean_jet          , miroc5_std_jet          , miroc5_jet_trends_yrs         , miroc5_jet_loc_f              , miroc5_jet_loc_xi             , miroc5_mean_jet_loc         , miroc5_std_jet_loc         , miroc5_jet_loc_trends_yrs         , miroc5_time_year          ] = MIROC5_taux;
 % NOR ESM1m M
 %[ nor_esm1m_me_jet_f    , nor_esm1m_me_jet_xi    , nor_esm1m_me_mean_jet    , nor_esm1m_me_std_jet    , nor_esm1m_me_jet_trends_yrs   , nor_esm1m_me_jet_loc_f        , nor_esm1m_me_jet_loc_xi       , nor_esm1m_me_mean_jet_loc   , nor_esm1m_me_std_jet_loc   , nor_esm1m_me_jet_loc_trends_yrs   , nor_esm1m_me_time_year    ] = NOR_ESM1m_ME_taux;
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149
 
- [ cm2mc_jet_f         , cm2mc_jet_xi         , cm2mc_mean_jet         , cm2mc_std_jet         , cm2mc_jet_trends_yrs        , cm2mc_jet_loc_f             , cm2mc_jet_loc_xi            , cm2mc_mean_jet_loc        , cm2mc_std_jet_loc        , cm2mc_jet_loc_trends_yrs        , cm2mc_time_year         ] = CM2Mc_taux;
- [ cm21_jet_f          , cm21_jet_xi          , cm21_mean_jet          , cm21_std_jet          , cm21_jet_trends_yrs         , cm21_jet_loc_f              , cm21_jet_loc_xi             , cm21_mean_jet_loc         , cm21_std_jet_loc         , cm21_jet_loc_trends_yrs         , cm21_time_year          ] = CM21_taux;
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149
 % NCEP Reanalyses 
 
 trend_period = 30;
@@ -98,26 +59,6 @@ figure(1)
 %plot(ccsm4_jet_xi, ccsm4_jet_f, 'b-o' )
 plot(cmcc_cesm_jet_xi, cmcc_cesm_jet_f, 'g-o')
 hold on 
-<<<<<<< HEAD
-plot(cmcc_cm_jet_xi, cmcc_cm_jet_f, 'r-o')
-plot(cmcc_cms_jet_xi, cmcc_cms_jet_f, 'c-o')
-%plot(cnrm_cm5_jet_xi, cnrm_cm5_jet_f, 'k-o')
-%plot(cnrm_cm52_jet_xi, cnrm_cm52_jet_f, 'm-o')
-plot(ipsl_cm5a_lr_jet_x, ipsl_cm5a_lr_jet_f, 'b-*')
-plot(ipsl_cm5a_mr_jet_xi, ipsl_cm5a_mr_jet_f, 'g-*')
-plot(ipsl_cm5b_lr_jet_xi, ipsl_cm5b_lr_jet_f, 'r-*')
-plot(miroc_esm_jet_xi, miroc_esm_jet_f,'c-*')
-plot(miroc_esm_chem_jet_xi, miroc_esm_chem_jet_f, 'k-*')
-%plot(mpi_cgcm3_jet_xi, mpi_cgcm3_jet_f, 'b-s')
-%plot(mpi_esm_lr_jet_xi, mpi_esm_lr_jet_f,'g-s')
-%plot(mpi_esm_mr_jet_xi, mpi_esm_mr_jet_f,'r-s')
-%plot(nor_esm1m_m_jet_xi, nor_esm1m_m_jet_f,'c-s')
-%plot(nor_esm1m_me_jet_xi, nor_esm1m_me_jet_f,'k-s')
-plot(cm2mc_jet_xi, cm2mc_jet_f, 'b', 'linewidth', 2)
-plot(cm21_jet_xi, cm21_jet_f, 'g', 'linewidth', 2)
-hR1 = vline(taux_trend_30, '-k');
-hR2 = vline(taux_trend_30_2, '-.k');
-=======
 plot(cmcc_cm_jet_xi      , cmcc_cm_jet_f          , 'r-o')
 plot(cmcc_cms_jet_xi     , cmcc_cms_jet_f         , 'c-o')
 %plot(cnrm_cm5_jet_xi      , cnrm_cm5_jet_f        , 'k-o')
@@ -143,17 +84,7 @@ plot(cm21_jet_xi , cm21_jet_f , 'g', 'linewidth', 2)
 hR1 = vline(taux_trend_30, '-k');
 hR2 = vline(taux_trend_30_2, '-.k');
 
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149
-legend('CMCC CESM','CMCC CM', 'CMCC CMs', 'IPSL CM5a LR',...
-       'IPSL CM5a MR', 'IPSL CM5b LR', 'MIROC ESM', 'MIROC ESM CHEM',...
-       'CM2Mc', 'CM2.1')
-set(gca, 'fontsize', 12)
-set(gcf, 'position', [100, 100, 1049, 895])
-xlabel('30 Year Linear Trend (Pa/30 years)', 'fontsize', 12)
-ylabel('Probability density estimate', 'fontsize', 12)
-   
- 
-<<<<<<< HEAD
+
 model_labels = {'   ';'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
     'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MPI CGCM3';'MPI ESM LR'; 'MPI ESM MR'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
     'CM2Mc'; 'CM2.1'; '   '};
@@ -177,7 +108,7 @@ Trends(11, 1:length(miroc_esm_chem_jet_trends_yrs)) = miroc_esm_chem_jet_trends_
 %Trends(16, 1:length(nor_esm1m_me_jet_trends_yrs)) = nor_esm1m_me_jet_trends_yrs;
 Trends(17, 1:length(cm2mc_jet_trends_yrs)) = cm2mc_jet_trends_yrs;
 Trends(18, 1:length(cm21_jet_trends_yrs)) = cm21_jet_trends_yrs;
-=======
+
 model_labels = {'   ';'CanESM2'; 'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL_ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
     'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MPI CGCM3';'MPI ESM LR'; 'MIROC5'; 'MPI ESM MR'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
     'CM2Mc'; 'CM2.1'; '   '};
@@ -205,8 +136,6 @@ Trends(14, 1:length(miroc_esm_chem_jet_trends_yrs)) = miroc_esm_chem_jet_trends_
 %Trends(20, 1:length(nor_esm1m_me_jet_trends_yrs)) = nor_esm1m_me_jet_trends_yrs;
 Trends(21, 1:length(cm2mc_jet_trends_yrs)) = cm2mc_jet_trends_yrs;
 Trends(22, 1:length(cm21_jet_trends_yrs)) = cm21_jet_trends_yrs;
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149
-
 
 Models = {'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
     'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MPI CGCM3';'MPI ESM LR'; 'MPI ESM MR'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
