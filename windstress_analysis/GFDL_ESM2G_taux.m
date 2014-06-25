@@ -1,57 +1,83 @@
+ function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year ] = GFDL_ESM2G_taux
+
 %GFDL_ESM2G_taux loads in the windstress data for the CNRM CM5 2 model and calculates the westerly wind jet and location and then calcuates the trend pdfs for these two variables. 
 
-close all
-clear all
 
 %% Import Data
-current_path = pwd;
-pathname_taux = fullfile(current_path, 'piControlData/GFDL_ESM2G/GFDL_ESM2G_taux.cdf');     % CDF file from Lamont website
+% current_path = pwd;
+% pathname_taux = fullfile(current_path, 'piControlData/GFDL_ESM2G/GFDL_ESM2G_taux.cdf');     % CDF file from Lamont website
+% 
+% pathname_coord = fullfile(current_path, 'piControlData/GFDL_ESM2G/tauuo_Omon_GFDL-ESM2G_esmControl_r1i1p1_049601-050012.nc');                      % CDF file from Lamont website does not contain lat and lon variables. 'pathname_coord' file downloaded from ESGF website to obtain these variables.
+% 
+% taux = ncread(pathname_taux,'tauuo'); %N/m^2
+% time = ncread(pathname_taux,'T');
+% 
+% lat = ncread(pathname_coord, 'lat');
+% lon = ncread(pathname_coord, 'lon');
+% 
+% 
+% clear current_path pathname_taux
+% 
+% %% Change from single type to double type
+% lat = double(lat);
+% lon = double(lon);
+% taux = double(taux);
+% 
+% %% Change land values to be NaNs
+% taux(taux>1e15)=NaN;
+% 
+% %% Plot Raw Data for first time step
+% figure(1)
+% axesm miller
+% surfacem(lat, lon, squeeze(taux(:,:,1)))
+% title('GFDL ESM2G Surface Windstress - Original Grid', 'fontsize', 12)
+% colorbar
+% set(gca, 'fontsize', 12)
+% set(gcf, 'position', [100, 100, 1049, 895])
+% 
+% %% Regridding
+% for i = 1:length(time);
+% [lon_new, lat_new, taux_new(:,:,i)] = griddata(lon, lat, squeeze(taux(:,:,i)), [0:360], [-90:90]');
+% end
+% 
+% lat = lat_new;
+% lon = lon_new;
+% taux = taux_new;
+% 
+% clear lat_new lon_new taux_new
+% 
+% cd /Users/jordanthomas/piControlTrends/piControlData/GFDL_ESM2G
+% 
+% save('GFDL_ESM2G_windstress.mat', 'taux', 'time', '-v7.3');
+% 
+% cd /Users/jordanthomas/piControlTrends
 
-pathname_coord = fullfile(current_path, 'piControlData/GFDL_ESM2G/tauuo_Omon_GFDL-ESM2G_esmControl_r1i1p1_049601-050012.nc');                      % CDF file from Lamont website does not contain lat and lon variables. 'pathname_coord' file downloaded from ESGF website to obtain these variables.
+load piControlData/GFDL_ESM2G/GFDL_ESM2G_windstress.mat
+load lat_lon.mat
 
-taux = ncread(pathname_taux,'tauuo'); %N/m^2
-time = ncread(pathname_taux,'T');
+%% Create Useful time vectors
+time_year = 1:500;
 
-lat = ncread(pathname_coord, 'lat');
-lon = ncread(pathname_coord, 'lon');
+%% Create lat and lon vectors 
+lat_matrix = lat;
+lon_matrix = lon;
 
+clear lat lon
 
-clear current_path pathname_taux
+lat = lat_matrix(:,1);
+lon = lon_matrix(1,:);
 
-%% Change from single type to double type
-lat = double(lat);
-lon = double(lon);
-taux = double(taux);
+%% Jet Strength and Location Analysis
 
-%% Change land values to be NaNs
-taux(taux>1e15)=NaN;
+[ ~, ~, ~, jet_ann, lat_jet_ann ] = taux_findmax( taux, lat, time );                                              
 
-%% Plot Raw Data for first time step
-figure(1)
-axesm miller
-surfacem(lat, lon, squeeze(taux(:,:,1)))
-title('GFDL ESM2G Surface Windstress - Original Grid', 'fontsize', 12)
-colorbar
-set(gca, 'fontsize', 12)
-set(gcf, 'position', [100, 100, 1049, 895])
+%% Trend Analysis PDFs
 
-%% Regridding
-for i = 1:length(time);
-[lon_new, lat_new, taux_new(:,:,i)] = griddata(lon, lat, squeeze(taux(:,:,i)), [0:360], [-90:90]');
+trend_period = 30;
+trend_length = 30;
+
+[jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs] = Windstress_Trends( time_year, jet_ann, lat_jet_ann, trend_period, trend_length );
+
 end
 
-lat = lat_new;
-lon = lon_new;
-taux = taux_new;
-
-clear lat_new lon_new taux_new
-
-cd /Users/jordanthomas/piControlTrends/piControlData/GFDL_ESM2G
-
-save('GFDL_ESM2G_windstress.mat', 'taux', 'time', '-v7.3');
-
-cd /Users/jordanthomas/piControlTrends
-
-load gong.mat;
-sound(y);
 
