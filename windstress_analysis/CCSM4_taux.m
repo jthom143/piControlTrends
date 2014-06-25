@@ -1,50 +1,82 @@
+function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year ] = CCSM4_taux
 
 %CCSM4_taux loads in the windstress data for the CMCC CESM model and calculates the westerly wind jet and location and then calcuates the trend pdfs for these two variables. 
 
 %% Import Data
-current_path = pwd;
-pathname_taux = fullfile(current_path, 'piControlData/CCSM4/CCSM4_taux.cdf');     % CDF file from Lamont website
+% current_path = pwd;
+% pathname_taux = fullfile(current_path, 'piControlData/CCSM4/CCSM4_taux.cdf');     % CDF file from Lamont website
+% 
+% taux = ncread(pathname_taux, 'tauuo');
+% time = ncread(pathname_taux, 'T');
+% 
+% pathname_coord = fullfile(current_path, 'piControlData/CCSM4/tauuo_Omon_CCSM4_piControl_r1i1p1_025001-050012.nc' );                      % CDF file from Lamont website does not contain lat and lon variables. 'pathname_coord' file downloaded from ESGF website to obtain these variables.
+% 
+% lat = ncread(pathname_coord, 'lat');
+% lon = ncread(pathname_coord, 'lon');
+% 
+% 
+% clear current_path pathname_taux pathname_coord
+% 
+% %% Change from single type to double type
+% lat = double(lat);
+% lon = double(lon);
+% taux = double(taux);
+% 
+% %% Change land values to be NaNs
+% taux(taux>1e15)=NaN;
+% 
+% %% Plot Raw Data for first time step
+% figure(1)
+% axesm miller
+% surfacem(lat, lon, squeeze(taux(:,:,1)))
+% title('CMCC CESM Surface Windstress - Original Grid', 'fontsize', 12)
+% colorbar
+% set(gca, 'fontsize', 12)
+% set(gcf, 'position', [100, 100, 1049, 895])
+% 
+% %% Regridding
+% for i = 1:length(time);
+% [lon_new, lat_new, taux_new(:,:,i)] = griddata(lon, lat, squeeze(taux(:,:,i)), [0:360], [-90:90]');
+% end
+% 
+% clear lat lon taux
+% 
+% lat = lat_new;
+% lon = lon_new;
+% taux = taux_new;
+% 
+% save('CCSM4_windstress.mat', 'taux', 'time', '-v7.3');
 
-taux = ncread(pathname_taux, 'tauuo');
-time = ncread(pathname_taux, 'T');
+load piControlData/CCSM4/CCSM4_windstress.mat
+load lat_lon.mat
 
-pathname_coord = fullfile(current_path, 'piControlData/CCSM4/tauuo_Omon_CCSM4_piControl_r1i1p1_025001-050012.nc' );                      % CDF file from Lamont website does not contain lat and lon variables. 'pathname_coord' file downloaded from ESGF website to obtain these variables.
+%% Create Useful time vectors
+time_year = 1:324;
 
-lat = ncread(pathname_coord, 'lat');
-lon = ncread(pathname_coord, 'lon');
+%% Create lat and lon vectors 
+lat_matrix = lat;
+lon_matrix = lon;
 
+clear lat lon
 
-clear current_path pathname_taux pathname_coord
+lat = lat_matrix(:,1);
+lon = lon_matrix(1,:);
 
-%% Change from single type to double type
-lat = double(lat);
-lon = double(lon);
-taux = double(taux);
+% Fix windstress variable 
 
-%% Change land values to be NaNs
-taux(taux>1e15)=NaN;
+taux = taux(:,:,1:(324*12));
+time = time(1:324*12);
+time = time';
 
-%% Plot Raw Data for first time step
-figure(1)
-axesm miller
-surfacem(lat, lon, squeeze(taux(:,:,1)))
-title('CMCC CESM Surface Windstress - Original Grid', 'fontsize', 12)
-colorbar
-set(gca, 'fontsize', 12)
-set(gcf, 'position', [100, 100, 1049, 895])
+%% Jet Strength and Location Analysis
 
-%% Regridding
-for i = 1:length(time);
-[lon_new, lat_new, taux_new(:,:,i)] = griddata(lon, lat, squeeze(taux(:,:,i)), [0:360], [-90:90]');
+[ ~, ~, ~, jet_ann, lat_jet_ann ] = taux_findmax( taux, lat, time );                                              
+
+%% Trend Analysis PDFs
+
+trend_period = 30;
+trend_length = 30;
+
+[jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs] = Windstress_Trends( time_year, jet_ann, lat_jet_ann, trend_period, trend_length );
+
 end
-
-clear lat lon taux
-
-lat = lat_new;
-lon = lon_new;
-taux = taux_new;
-
-save('CCSM4_windstress.mat', 'taux', 'time', '-v7.3');
- 
-send_text_message('484-410-9322','AT&T','Code Finished','Test')
-
