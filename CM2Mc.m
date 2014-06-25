@@ -1,9 +1,10 @@
-function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized ] = CM2Mc
+function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized, sam_trends_yrs ] = CM2Mc
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 %% Import Data
-pathname_ps = '/Users/jordanthomas/Desktop/Research/CM2Mc/Analysis2/Data/cm2mc_ps.nc';
+% pathname_ps = '/Users/jordanthomas/Desktop/Research/CM2Mc/Analysis2/Data/cm2mc_ps.nc';
+pathname_ps = '/home/jthom143/CM2Mc/Analysis2/Data/cm2mc_ps.nc';
 
 ps = ncread(pathname_ps, 'PS');                 % Pa
 lat_atmos = ncread(pathname_ps, 'LAT');         % Degrees
@@ -40,7 +41,7 @@ SAM_unnormalized = squeeze(nanmean(reshape(SAM_mon_unnormalized, 12, []),1));
 trend_period = 30;
 trend_length = 30;
 
-[ sam_f, sam_xi, mean_sam, std_sam] = SAM_Trends( time_year, SAM_unnormalized, trend_period, trend_length );
+[ sam_f, sam_xi, mean_sam, std_sam, sam_trends_yrs] = SAM_Trends( time_year, SAM_unnormalized, trend_period, trend_length );
 
 
 end
