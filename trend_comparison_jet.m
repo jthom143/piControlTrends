@@ -15,14 +15,13 @@ clear all
 addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis1
 addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
 addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
+addpath /Users/jordanthomas/piControlTrends/windstress_analysis
 
 % addpath /home/jthom143/Tools/Functions
 % addpath /home/jthom143/NCEPReanalysis1
 % addpath /home/jthom143/NCEPReanalysis2
 
 %% Trend Analysis
-
-cd windstress_analysis
 
 % CanESM2
 %[ ccsm4_jet_f           , ccsm4_jet_xi           , ccsm4_mean_jet           , ccsm4_std_jet           , ccsm4_jet_trends_yrs          , ccsm4_jet_loc_f               , ccsm4_jet_loc_xi              , ccsm4_mean_jet_loc          , ccsm4_std_jet_loc          , ccsm4_jet_loc_trends_yrs          , ccsm4_time_year           ] = CCSM4_taux;
@@ -48,7 +47,7 @@ cd windstress_analysis
  [ cm2mc_jet_f         , cm2mc_jet_xi         , cm2mc_mean_jet         , cm2mc_std_jet         , cm2mc_jet_trends_yrs        , cm2mc_jet_loc_f             , cm2mc_jet_loc_xi            , cm2mc_mean_jet_loc        , cm2mc_std_jet_loc        , cm2mc_jet_loc_trends_yrs        , cm2mc_time_year         ] = CM2Mc_taux;
  [ cm21_jet_f          , cm21_jet_xi          , cm21_mean_jet          , cm21_std_jet          , cm21_jet_trends_yrs         , cm21_jet_loc_f              , cm21_jet_loc_xi             , cm21_mean_jet_loc         , cm21_std_jet_loc         , cm21_jet_loc_trends_yrs         , cm21_time_year          ] = CM21_taux;
 
- cd ..
+
 
 % NCEP Reanalyses 
 
