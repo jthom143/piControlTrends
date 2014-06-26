@@ -39,7 +39,7 @@ function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_
 % end
 
 %% Import Data
-load piControlData/ipsl_cm5a_lr_taux.mat
+load piControlData/IPSL_CM5a_LR/ipsl_cm5a_lr_taux.mat
 
 %% Plot Interpolated Data for first time step
 % figure(1)
