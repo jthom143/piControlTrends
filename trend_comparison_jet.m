@@ -32,8 +32,8 @@ addpath /data1/fesd1/jthom143/piControlTrends/windstress_analysis
  [ cmcc_cms_jet_f        , cmcc_cms_jet_xi        , cmcc_cms_mean_jet        , cmcc_cms_std_jet        , cmcc_cms_jet_trends_yrs       , cmcc_cms_jet_loc_f            , cmcc_cms_jet_loc_xi           , cmcc_cms_mean_jet_loc       , cmcc_cms_std_jet_loc       , cmcc_cms_jet_loc_trends_yrs       , cmcc_cms_time_year        ] = CMCC_CMs_taux;
 %[ cnrm_cm5_jet_f        , cnrm_cm5_jet_xi        , cnrm_cm5_mean_jet        , cnrm_cm5_std_jet        , cnrm_cm5_jet_trends_yrs       , cnrm_cm5_jet_loc_f            , cnrm_cm5_jet_loc_xi           , cnrm_cm5_mean_jet_loc       , cnrm_cm5_std_jet_loc       , cnrm_cm5_jet_loc_trends_yrs       , cnrm_cm5_time_year        ] = CNRM_CM5_taux;
 %[ cnrm_cm52_jet_f       , cnrm_cm52_jet_xi       , cnrm_cm52_mean_jet       , cnrm_cm52_std_jet       , cnrm_cm52_jet_trends_yrs      , cnrm_cm52_jet_loc_f           , cnrm_cm52_jet_loc_xi          , cnrm_cm52_mean_jet_loc      , cnrm_cm52_std_jet_loc      , cnrm_cm52_jet_loc_trends_yrs      , cnrm_cm52_time_year       ] = CNRM_CM52_taux;
-%[ gfdl_esm2g_jet_f      , gfdl_esm2g_jet_xi      , gfdl_esm2g_mean_jet      , gfdl_esm2g_std_jet      , gfdl_esm2g_jet_trends_yrs     , gfdl_esm2g_jet_loc_f          , gfdl_esm2g_jet_loc_xi         , gfdl_esm2g_mean_jet_loc     , gfdl_esm2g_std_jet_loc     , gfdl_esm2g_jet_loc_trends_yrs     , gfdl_esm2g_time_year      ] = GFDL_ESM2G_taux;
-%[ gfdl_esm2m_jet_f      , gfdl_esm2m_jet_xi      , gfdl_esm2m_mean_jet      , gfdl_esm2m_std_jet      , gfdl_esm2m_jet_trends_yrs     , gfdl_esm2m_jet_loc_f          , gfdl_esm2m_jet_loc_xi         , gfdl_esm2m_mean_jet_loc     , gfdl_esm2m_std_jet_loc     , gfdl_esm2m_jet_loc_trends_yrs     , gfdl_esm2m_time_year      ] = GFDL_ESM2M_taux;
+ [ gfdl_esm2g_jet_f      , gfdl_esm2g_jet_xi      , gfdl_esm2g_mean_jet      , gfdl_esm2g_std_jet      , gfdl_esm2g_jet_trends_yrs     , gfdl_esm2g_jet_loc_f          , gfdl_esm2g_jet_loc_xi         , gfdl_esm2g_mean_jet_loc     , gfdl_esm2g_std_jet_loc     , gfdl_esm2g_jet_loc_trends_yrs     , gfdl_esm2g_time_year      ] = GFDL_ESM2G_taux;
+ [ gfdl_esm2m_jet_f      , gfdl_esm2m_jet_xi      , gfdl_esm2m_mean_jet      , gfdl_esm2m_std_jet      , gfdl_esm2m_jet_trends_yrs     , gfdl_esm2m_jet_loc_f          , gfdl_esm2m_jet_loc_xi         , gfdl_esm2m_mean_jet_loc     , gfdl_esm2m_std_jet_loc     , gfdl_esm2m_jet_loc_trends_yrs     , gfdl_esm2m_time_year      ] = GFDL_ESM2M_taux;
  [ ipsl_cm5a_lr_jet_f    , ipsl_cm5a_lr_jet_x     , ipsl_cm5a_lr_mean_jet    , ipsl_cm5a_lr_std_jet    , ipsl_cm5a_lr_jet_trends_yrs   , ipsl_cm5a_lr_jet_loc_f        , ipsl_cm5a_lr_jet_loc_xi       , ipsl_cm5a_lr_mean_jet_loc   , ipsl_cm5a_lr_std_jet_loc   , ipsl_cm5a_lr_jet_loc_trends_yrs   , ipsl_cm5a_lr_time_year    ] = IPSL_CM5a_LR_taux;
  [ ipsl_cm5a_mr_jet_f    , ipsl_cm5a_mr_jet_xi    , ipsl_cm5a_mr_mean_jet    , ipsl_cm5a_mr_std_jet    , ipsl_cm5a_mr_jet_trends_yrs   , ipsl_cm5a_mr_jet_loc_f        , ipsl_cm5a_mr_jet_loc_xi       , ipsl_cm5a_mr_mean_jet_loc   , ipsl_cm5a_mr_std_jet_loc   , ipsl_cm5a_mr_jet_loc_trends_yrs   , ipsl_cm5a_mr_time_year    ] = IPSL_CM5a_MR_taux;
  [ ipsl_cm5b_lr_jet_f    , ipsl_cm5b_lr_jet_xi    , ipsl_cm5b_lr_mean_jet    , ipsl_cm5b_lr_std_jet    , ipsl_cm5b_lr_jet_trends_yrs   , ipsl_cm5b_lr_jet_loc_f        , ipsl_cm5b_lr_jet_loc_xi       , ipsl_cm5b_lr_mean_jet_loc   , ipsl_cm5b_lr_std_jet_loc   , ipsl_cm5b_lr_jet_loc_trends_yrs   , ipsl_cm5b_lr_time_year    ] = IPSL_CM5b_LR_taux;
@@ -68,8 +68,8 @@ plot(cmcc_cm_jet_xi      , cmcc_cm_jet_f          , 'r-o')
 plot(cmcc_cms_jet_xi     , cmcc_cms_jet_f         , 'c-o')
 %plot(cnrm_cm5_jet_xi      , cnrm_cm5_jet_f        , 'k-o')
 %plot(cnrm_cm52_jet_xi     , cnrm_cm52_jet_f       , 'm-o')
-%plot(gfdl_esm2g_jet_xi    , gfdl_esm2g_jet_f      , 'c-' )
-%plot(gfdl_esm2m_jet_xi    , gfdl_esm2m_jet_f      , 'g-' )
+plot(gfdl_esm2g_jet_xi    , gfdl_esm2g_jet_f      , 'c-' )
+plot(gfdl_esm2m_jet_xi    , gfdl_esm2m_jet_f      , 'g-' )
 plot(ipsl_cm5a_lr_jet_x   , ipsl_cm5a_lr_jet_f  , 'b-*')
 plot(ipsl_cm5a_mr_jet_xi  , ipsl_cm5a_mr_jet_f  , 'g-*')
 plot(ipsl_cm5b_lr_jet_xi  , ipsl_cm5b_lr_jet_f  , 'r-*')
@@ -88,7 +88,7 @@ plot(cm21_jet_xi , cm21_jet_f , 'g', 'linewidth', 2)
 hR1 = vline(taux_trend_30, '-k');
 hR2 = vline(taux_trend_30_2, '-.k');
 
-legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs', 'IPSL CM5a LR', 'IPSL CM5a MR', 'IPSL CM5b LR', 'MRI CGCM3', 'MPI ESM LR', 'MPI ESM MR', 'MIROC5', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
+legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs','GFDL ESM2M','GFDL ESM2G', 'IPSL CM5a LR', 'IPSL CM5a MR', 'IPSL CM5b LR', 'MRI CGCM3', 'MPI ESM LR', 'MPI ESM MR', 'MIROC5', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 895])
 xlabel('30 Year Linear Trend (Pa/30 years)', 'fontsize', 12)
@@ -107,8 +107,8 @@ Trends(4, 1:length(cmcc_cm_jet_trends_yrs)) = cmcc_cm_jet_trends_yrs;
 Trends(5, 1:length(cmcc_cms_jet_trends_yrs)) = cmcc_cms_jet_trends_yrs;
 %Trends(6, 1:length(cnrm_cm5_jet_trends_yrs)) = cnrm_cm5_jet_trends_yrs;
 %Trends(7, 1:length(cnrm_cm52_jet_trends_yrs)) = cnrm_cm52_jet_trends_yrs;
-%Trends(8, 1:length(gfdl_esm2g_jet_trends_yrs)) = gfdl_esm2g_jet_trends_yrs;
-%Trends(9, 1:length(gfdl_esm2m_jet_trends_yrs)) = gfdl_esm2m_jet_trends_yrs;
+Trends(8, 1:length(gfdl_esm2g_jet_trends_yrs)) = gfdl_esm2g_jet_trends_yrs;
+Trends(9, 1:length(gfdl_esm2m_jet_trends_yrs)) = gfdl_esm2m_jet_trends_yrs;
 Trends(10, 1:length(ipsl_cm5a_lr_jet_trends_yrs)) = ipsl_cm5a_lr_jet_trends_yrs;
 Trends(11, 1:length(ipsl_cm5a_mr_jet_trends_yrs)) = ipsl_cm5a_mr_jet_trends_yrs;
 Trends(12, 1:length(ipsl_cm5b_lr_jet_trends_yrs)) = ipsl_cm5b_lr_jet_trends_yrs;
@@ -139,8 +139,8 @@ plot(4, 2*cmcc_cm_std_jet, '*', 'markersize', 12)
 plot(5, 2*cmcc_cms_std_jet, '*', 'markersize', 12)
 %plot(6, 2*cnrm_cm5_std_jet, '*', 'markersize', 12)
 %plot(7, 2*cnrm_cm52_std_jet, '*', 'markersize', 12)
-%plot(8, 2*gfdl_esm2g_std_jet, '*', 'markersize', 12)
-%plot(9, 2*gfdl_esm2m_std_jet, '*', 'markersize', 12)
+plot(8, 2*gfdl_esm2g_std_jet, '*', 'markersize', 12)
+plot(9, 2*gfdl_esm2m_std_jet, '*', 'markersize', 12)
 plot(10, 2*ipsl_cm5a_lr_std_jet, '*', 'markersize', 12)
 plot(11, 2*ipsl_cm5a_mr_std_jet, '*', 'markersize', 12)
 plot(12, 2*ipsl_cm5b_lr_std_jet, '*', 'markersize', 12)
@@ -166,8 +166,8 @@ plot(4, percentile(4), 'r*', 'markersize', 12)
 plot(5, percentile(5), 'r*', 'markersize', 12)
 %plot(6, percentile(6), 'r*', 'markersize', 12)
 %plot(7, percentile(7), 'r*', 'markersize', 12)
-%plot(8, percentile(8), 'r*', 'markersize', 12)
-%plot(9, percentile(9), 'r*', 'markersize', 12)
+plot(8, percentile(8), 'r*', 'markersize', 12)
+plot(9, percentile(9), 'r*', 'markersize', 12)
 plot(10, percentile(10), 'r*', 'markersize', 12)
 plot(11, percentile(11), 'r*', 'markersize', 12)
 plot(12, percentile(12), 'r*', 'markersize', 12)
@@ -226,8 +226,8 @@ plot(cmcc_cm_jet_loc_xi, cmcc_cm_jet_loc_f, 'r-o')
 plot(cmcc_cms_jet_loc_xi, cmcc_cms_jet_loc_f, 'c-o')
 %plot(cnrm_cm5_jet_loc_xi, cnrm_cm5_jet_loc_f, 'k-o')
 %plot(cnrm_cm52_jet_loc_xi, cnrm_cm52_jet_loc_f, 'm-o')
-%plot(gfdl_esm2g_jet_lox_xi, gfdl_esm2g_jet_loc_f, 'r-')
-%plot(gfdl_esm2m_jet_lox_xi, gfdl_esm2m_jet_loc_f, 'g-')
+plot(gfdl_esm2g_jet_loc_xi, gfdl_esm2g_jet_loc_f, 'r-')
+plot(gfdl_esm2m_jet_loc_xi, gfdl_esm2m_jet_loc_f, 'g-')
 plot(ipsl_cm5a_lr_jet_loc_xi, ipsl_cm5a_lr_jet_loc_f, 'b-*')
 plot(ipsl_cm5a_mr_jet_loc_xi, ipsl_cm5a_mr_jet_loc_f, 'g-*')
 plot(ipsl_cm5b_lr_jet_loc_xi, ipsl_cm5b_lr_jet_loc_f, 'r-*')
@@ -243,7 +243,7 @@ plot(cm2mc_jet_loc_xi, cm2mc_jet_loc_f, 'b', 'linewidth', 2)
 plot(cm21_jet_loc_xi, cm21_jet_loc_f, 'g', 'linewidth', 2)
 hR1 = vline(lat_trend_30, '-k');
 hR2 = vline(lat_trend_30_2, '-.k');
-legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs', 'IPSL CM5a LR',...
+legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs','GFDL ESM2M','GFDL ESM2G', 'IPSL CM5a LR',...
     'IPSL CM5a MR', 'IPSL CM5b LR', 'MRI CGCM3', 'MPI ESM LR', 'MPI ESM MR',...
     'MIROC5', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
 set(gca, 'fontsize', 12)
@@ -260,8 +260,8 @@ Trends(4, 1:length(cmcc_cm_jet_loc_trends_yrs)) = cmcc_cm_jet_loc_trends_yrs;
 Trends(5, 1:length(cmcc_cms_jet_loc_trends_yrs)) = cmcc_cms_jet_loc_trends_yrs;
 %Trends(6, 1:length(cnrm_cm5_jet_loc_trends_yrs)) = cnrm_cm5_jet_loc_trends_yrs;
 %Trends(7, 1:length(cnrm_cm52_jet_loc_trends_yrs)) = cnrm_cm52_jet_loc_trends_yrs;
-%Trends(8, 1:length(gfdl_esm2g_jet_loc_trends_yrs)) = gfdl_esm2g_jet_loc_trends_yrs;
-%Trends(9, 1:length(gfdl_esm2m_jet_loc_trends_yrs)) = gfdl_esm2m_jet_loc_trends_yrs;
+Trends(8, 1:length(gfdl_esm2g_jet_loc_trends_yrs)) = gfdl_esm2g_jet_loc_trends_yrs;
+Trends(9, 1:length(gfdl_esm2m_jet_loc_trends_yrs)) = gfdl_esm2m_jet_loc_trends_yrs;
 Trends(10, 1:length(ipsl_cm5a_lr_jet_loc_trends_yrs)) = ipsl_cm5a_lr_jet_loc_trends_yrs;
 Trends(11, 1:length(ipsl_cm5a_mr_jet_loc_trends_yrs)) = ipsl_cm5a_mr_jet_loc_trends_yrs;
 Trends(12, 1:length(ipsl_cm5b_lr_jet_loc_trends_yrs)) = ipsl_cm5b_lr_jet_loc_trends_yrs;
@@ -289,8 +289,8 @@ plot(4, 2*cmcc_cm_std_jet_loc, '*', 'markersize', 12)
 plot(5, 2*cmcc_cms_std_jet_loc, '*', 'markersize', 12)
 %plot(6, 2*cnrm_cm5_std_jet_loc, '*', 'markersize', 12)
 %plot(7, 2*cnrm_cm52_std_jet_loc, '*', 'markersize', 12)
-%plot(8, 2*gfdl_esm2g_std_jet_loc, '*', 'markersize', 12)
-%plot(9, 2*gfdl_esm2m_std_jet_loc, '*', 'markersize', 12)
+plot(8, 2*gfdl_esm2g_std_jet_loc, '*', 'markersize', 12)
+plot(9, 2*gfdl_esm2m_std_jet_loc, '*', 'markersize', 12)
 plot(10, 2*ipsl_cm5a_lr_std_jet_loc, '*', 'markersize', 12)
 plot(11, 2*ipsl_cm5a_mr_std_jet_loc, '*', 'markersize', 12)
 plot(12, 2*ipsl_cm5b_lr_std_jet_loc, '*', 'markersize', 12)
@@ -316,8 +316,8 @@ plot(4, percentile(4), 'r*', 'markersize', 12)
 plot(5, percentile(5), 'r*', 'markersize', 12)
 %plot(6, percentile(6), 'r*', 'markersize', 12)
 %plot(7, percentile(7), 'r*', 'markersize', 12)
-%plot(8, percentile(8), 'r*', 'markersize', 12)
-%plot(9, percentile(9), 'r*', 'markersize', 12)
+plot(8, percentile(8), 'r*', 'markersize', 12)
+plot(9, percentile(9), 'r*', 'markersize', 12)
 plot(10, percentile(10), 'r*', 'markersize', 12)
 plot(11, percentile(11), 'r*', 'markersize', 12)
 plot(12, percentile(12), 'r*', 'markersize', 12)
