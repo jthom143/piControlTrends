@@ -11,8 +11,8 @@ pathname_taux = fullfile(current_path, 'piControlData/GFDL_ESM2G/GFDL_ESM2G_taux
 taux = ncread(pathname_taux,'tauuo'); %N/m^2
 time = ncread(pathname_taux,'T');
 
-lat = ncread(pathname_coord, 'rlat');
-lon = ncread(pathname_coord, 'rlon');
+lat = ncread(pathname_taux, 'rlat');
+lon = ncread(pathname_taux, 'rlon');
 
 
 clear current_path pathname_taux 
