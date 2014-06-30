@@ -37,8 +37,8 @@ addpath /data1/fesd1/jthom143/piControlTrends/windstress_analysis
  [ ipsl_cm5a_lr_jet_f    , ipsl_cm5a_lr_jet_x     , ipsl_cm5a_lr_mean_jet    , ipsl_cm5a_lr_std_jet    , ipsl_cm5a_lr_jet_trends_yrs   , ipsl_cm5a_lr_jet_loc_f        , ipsl_cm5a_lr_jet_loc_xi       , ipsl_cm5a_lr_mean_jet_loc   , ipsl_cm5a_lr_std_jet_loc   , ipsl_cm5a_lr_jet_loc_trends_yrs   , ipsl_cm5a_lr_time_year    ] = IPSL_CM5a_LR_taux;
  [ ipsl_cm5a_mr_jet_f    , ipsl_cm5a_mr_jet_xi    , ipsl_cm5a_mr_mean_jet    , ipsl_cm5a_mr_std_jet    , ipsl_cm5a_mr_jet_trends_yrs   , ipsl_cm5a_mr_jet_loc_f        , ipsl_cm5a_mr_jet_loc_xi       , ipsl_cm5a_mr_mean_jet_loc   , ipsl_cm5a_mr_std_jet_loc   , ipsl_cm5a_mr_jet_loc_trends_yrs   , ipsl_cm5a_mr_time_year    ] = IPSL_CM5a_MR_taux;
  [ ipsl_cm5b_lr_jet_f    , ipsl_cm5b_lr_jet_xi    , ipsl_cm5b_lr_mean_jet    , ipsl_cm5b_lr_std_jet    , ipsl_cm5b_lr_jet_trends_yrs   , ipsl_cm5b_lr_jet_loc_f        , ipsl_cm5b_lr_jet_loc_xi       , ipsl_cm5b_lr_mean_jet_loc   , ipsl_cm5b_lr_std_jet_loc   , ipsl_cm5b_lr_jet_loc_trends_yrs   , ipsl_cm5b_lr_time_year    ] = IPSL_CM5b_LR_taux;
- %[ miroc_esm_jet_f       , miroc_esm_jet_xi       , miroc_esm_mean_jet       , miroc_esm_std_jet       , miroc_esm_jet_trends_yrs      , miroc_esm_jet_loc_f           , miroc_esm_jet_loc_xi          , miroc_esm_mean_jet_loc      , miroc_esm_std_jet_loc      , miroc_esm_jet_loc_trends_yrs      , miroc_esm_time_year       ] = MIROC_ESM_taux;
- %[ miroc_esm_chem_jet_f  , miroc_esm_chem_jet_xi  , miroc_esm_chem_mean_jet  , miroc_esm_chem_std_jet  , miroc_esm_chem_jet_trends_yrs , miroc_esm_chem_jet_loc_f      , miroc_esm_chem_jet_loc_xi     , miroc_esm_chem_mean_jet_loc , miroc_esm_chem_std_jet_loc , miroc_esm_chem_jet_loc_trends_yrs , miroc_esm_chem_time_year  ] = MIROC_ESM_CHEM_taux;
+ [ miroc_esm_jet_f       , miroc_esm_jet_xi       , miroc_esm_mean_jet       , miroc_esm_std_jet       , miroc_esm_jet_trends_yrs      , miroc_esm_jet_loc_f           , miroc_esm_jet_loc_xi          , miroc_esm_mean_jet_loc      , miroc_esm_std_jet_loc      , miroc_esm_jet_loc_trends_yrs      , miroc_esm_time_year       ] = MIROC_ESM_taux;
+ [ miroc_esm_chem_jet_f  , miroc_esm_chem_jet_xi  , miroc_esm_chem_mean_jet  , miroc_esm_chem_std_jet  , miroc_esm_chem_jet_trends_yrs , miroc_esm_chem_jet_loc_f      , miroc_esm_chem_jet_loc_xi     , miroc_esm_chem_mean_jet_loc , miroc_esm_chem_std_jet_loc , miroc_esm_chem_jet_loc_trends_yrs , miroc_esm_chem_time_year  ] = MIROC_ESM_CHEM_taux;
  [ mri_cgcm3_jet_f       , mri_cgcm3_jet_xi       , mri_cgcm3_mean_jet       , mri_cgcm3_std_jet       , mri_cgcm3_jet_trends_yrs      , mri_cgcm3_jet_loc_f           , mri_cgcm3_jet_loc_xi          , mri_cgcm3_mean_jet_loc      , mri_cgcm3_std_jet_loc      , mri_cgcm3_jet_loc_trends_yrs      , mri_cgcm3_time_year       ] = MRI_CGCM3_taux;
  [ mpi_esm_lr_jet_f      , mpi_esm_lr_jet_xi      , mpi_esm_lr_mean_jet      , mpi_esm_lr_std_jet      , mpi_esm_lr_jet_trends_yrs     , mpi_esm_lr_jet_loc_f          , mpi_esm_lr_jet_loc_xi         , mpi_esm_lr_mean_jet_loc     , mpi_esm_lr_std_jet_loc     , mpi_esm_lr_jet_loc_trends_yrs     , mpi_esm_lr_time_year      ] = MPI_ESM_LR_taux;
  [ mpi_esm_mr_jet_f      , mpi_esm_mr_jet_xi      , mpi_esm_mr_mean_jet      , mpi_esm_mr_std_jet      , mpi_esm_mr_jet_trends_yrs     , mpi_esm_mr_jet_loc_f          , mpi_esm_mr_jet_loc_xi         , mpi_esm_mr_mean_jet_loc     , mpi_esm_mr_std_jet_loc     , mpi_esm_mr_jet_loc_trends_yrs     , mpi_esm_mr_time_year      ] = MPI_ESM_MR_taux;
@@ -73,8 +73,8 @@ plot(gfdl_esm2m_jet_xi    , gfdl_esm2m_jet_f      , 'g-' )
 plot(ipsl_cm5a_lr_jet_x   , ipsl_cm5a_lr_jet_f  , 'b-*')
 plot(ipsl_cm5a_mr_jet_xi  , ipsl_cm5a_mr_jet_f  , 'g-*')
 plot(ipsl_cm5b_lr_jet_xi  , ipsl_cm5b_lr_jet_f  , 'r-*')
-%plot(miroc_esm_jet_xi     , miroc_esm_jet_f     , 'c-*')
-%plot(miroc_esm_chem_jet_xi, miroc_esm_chem_jet_f, 'k-*')
+plot(miroc_esm_jet_xi     , miroc_esm_jet_f     , 'c-*')
+plot(miroc_esm_chem_jet_xi, miroc_esm_chem_jet_f, 'k-*')
 plot(mri_cgcm3_jet_xi     , mri_cgcm3_jet_f       , 'b-s')
 plot(mpi_esm_lr_jet_xi    , mpi_esm_lr_jet_f      , 'g-s')
 plot(mpi_esm_mr_jet_xi    , mpi_esm_mr_jet_f      , 'r-s')
@@ -88,7 +88,7 @@ plot(cm21_jet_xi , cm21_jet_f , 'g', 'linewidth', 2)
 hR1 = vline(taux_trend_30, '-k');
 hR2 = vline(taux_trend_30_2, '-.k');
 
-legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs','CNRM CM5-2','GFDL ESM2M','GFDL ESM2G', 'IPSL CM5a LR', 'IPSL CM5a MR', 'IPSL CM5b LR', 'MRI CGCM3', 'MPI ESM LR', 'MPI ESM MR', 'MIROC5', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
+legend('CCSM4', 'CMCC CESM', 'CMCC CM', 'CMCC CMs','CNRM CM5-2','GFDL ESM2M','GFDL ESM2G', 'IPSL CM5a LR', 'IPSL CM5a MR', 'IPSL CM5b LR','MIROC ESM','MIROC ESM CHEM', 'MRI CGCM3', 'MPI ESM LR', 'MPI ESM MR', 'MIROC5', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 895])
 xlabel('30 Year Linear Trend (Pa/30 years)', 'fontsize', 12)
@@ -112,8 +112,8 @@ Trends(9, 1:length(gfdl_esm2m_jet_trends_yrs)) = gfdl_esm2m_jet_trends_yrs;
 Trends(10, 1:length(ipsl_cm5a_lr_jet_trends_yrs)) = ipsl_cm5a_lr_jet_trends_yrs;
 Trends(11, 1:length(ipsl_cm5a_mr_jet_trends_yrs)) = ipsl_cm5a_mr_jet_trends_yrs;
 Trends(12, 1:length(ipsl_cm5b_lr_jet_trends_yrs)) = ipsl_cm5b_lr_jet_trends_yrs;
-%Trends(13, 1:length(miroc_esm_jet_trends_yrs)) = miroc_esm_jet_trends_yrs;
-%Trends(14, 1:length(miroc_esm_chem_jet_trends_yrs)) = miroc_esm_chem_jet_trends_yrs;
+Trends(13, 1:length(miroc_esm_jet_trends_yrs)) = miroc_esm_jet_trends_yrs;
+Trends(14, 1:length(miroc_esm_chem_jet_trends_yrs)) = miroc_esm_chem_jet_trends_yrs;
 Trends(15, 1:length(miroc5_jet_trends_yrs)) = miroc5_jet_trends_yrs;
 Trends(16, 1:length(mpi_esm_lr_jet_trends_yrs)) = mpi_esm_lr_jet_trends_yrs;
 Trends(17, 1:length(mpi_esm_mr_jet_trends_yrs)) = mpi_esm_mr_jet_trends_yrs;
@@ -144,8 +144,8 @@ plot(9, 2*gfdl_esm2m_std_jet, '*', 'markersize', 12)
 plot(10, 2*ipsl_cm5a_lr_std_jet, '*', 'markersize', 12)
 plot(11, 2*ipsl_cm5a_mr_std_jet, '*', 'markersize', 12)
 plot(12, 2*ipsl_cm5b_lr_std_jet, '*', 'markersize', 12)
-%plot(13, 2*miroc_esm_std_jet, '*', 'markersize', 12)
-%plot(14, 2*miroc_esm_chem_std_jet, '*', 'markersize', 12)
+plot(13, 2*miroc_esm_std_jet, '*', 'markersize', 12)
+plot(14, 2*miroc_esm_chem_std_jet, '*', 'markersize', 12)
 plot(15, 2*miroc5_std_jet, '*', 'markersize', 12)
 plot(16, 2*mpi_esm_lr_std_jet, '*', 'markersize', 12)
 plot(17, 2*mpi_esm_mr_std_jet, '*', 'markersize', 12)
@@ -171,8 +171,8 @@ plot(9, percentile(9), 'r*', 'markersize', 12)
 plot(10, percentile(10), 'r*', 'markersize', 12)
 plot(11, percentile(11), 'r*', 'markersize', 12)
 plot(12, percentile(12), 'r*', 'markersize', 12)
-%plot(13, percentile(13), 'r*', 'markersize', 12)
-%plot(14, percentile(14), 'r*', 'markersize', 12)
+plot(13, percentile(13), 'r*', 'markersize', 12)
+plot(14, percentile(14), 'r*', 'markersize', 12)
 plot(15, percentile(15), 'r*', 'markersize', 12)
 plot(16, percentile(16), 'r*', 'markersize', 12)
 plot(17, percentile(17), 'r*', 'markersize', 12)
@@ -231,8 +231,8 @@ plot(gfdl_esm2m_jet_loc_xi, gfdl_esm2m_jet_loc_f, 'g-')
 plot(ipsl_cm5a_lr_jet_loc_xi, ipsl_cm5a_lr_jet_loc_f, 'b-*')
 plot(ipsl_cm5a_mr_jet_loc_xi, ipsl_cm5a_mr_jet_loc_f, 'g-*')
 plot(ipsl_cm5b_lr_jet_loc_xi, ipsl_cm5b_lr_jet_loc_f, 'r-*')
-%plot(miroc_esm_jet_loc_xi, miroc_esm_jet_loc_f,'c-*')
-%plot(miroc_esm_chem_jet_loc_xi, miroc_esm_chem_jet_loc_f, 'k-*')
+plot(miroc_esm_jet_loc_xi, miroc_esm_jet_loc_f,'c-*')
+plot(miroc_esm_chem_jet_loc_xi, miroc_esm_chem_jet_loc_f, 'k-*')
 plot(miroc5_jet_loc_xi, miroc5_jet_loc_f, 'c-*')
 plot(mri_cgcm3_jet_loc_xi, mri_cgcm3_jet_loc_f, 'b-s')
 plot(mpi_esm_lr_jet_loc_xi, mpi_esm_lr_jet_loc_f,'g-s')
@@ -265,8 +265,8 @@ Trends(9, 1:length(gfdl_esm2m_jet_loc_trends_yrs)) = gfdl_esm2m_jet_loc_trends_y
 Trends(10, 1:length(ipsl_cm5a_lr_jet_loc_trends_yrs)) = ipsl_cm5a_lr_jet_loc_trends_yrs;
 Trends(11, 1:length(ipsl_cm5a_mr_jet_loc_trends_yrs)) = ipsl_cm5a_mr_jet_loc_trends_yrs;
 Trends(12, 1:length(ipsl_cm5b_lr_jet_loc_trends_yrs)) = ipsl_cm5b_lr_jet_loc_trends_yrs;
-%Trends(13, 1:length(miroc_esm_jet_loc_trends_yrs)) = miroc_esm_jet_loc_trends_yrs;
-%Trends(14, 1:length(miroc_esm_chem_jet_loc_trends_yrs)) = miroc_esm_chem_jet_loc_trends_yrs;
+Trends(13, 1:length(miroc_esm_jet_loc_trends_yrs)) = miroc_esm_jet_loc_trends_yrs;
+Trends(14, 1:length(miroc_esm_chem_jet_loc_trends_yrs)) = miroc_esm_chem_jet_loc_trends_yrs;
 Trends(15, 1:length(miroc5_jet_loc_trends_yrs)) = miroc5_jet_loc_trends_yrs;
 Trends(16, 1:length(mpi_esm_lr_jet_loc_trends_yrs)) = mpi_esm_lr_jet_loc_trends_yrs;
 Trends(17, 1:length(mpi_esm_mr_jet_loc_trends_yrs)) = mpi_esm_mr_jet_loc_trends_yrs;
@@ -294,8 +294,8 @@ plot(9, 2*gfdl_esm2m_std_jet_loc, '*', 'markersize', 12)
 plot(10, 2*ipsl_cm5a_lr_std_jet_loc, '*', 'markersize', 12)
 plot(11, 2*ipsl_cm5a_mr_std_jet_loc, '*', 'markersize', 12)
 plot(12, 2*ipsl_cm5b_lr_std_jet_loc, '*', 'markersize', 12)
-%plot(13, 2*miroc_esm_std_jet_loc, '*', 'markersize', 12)
-%plot(14, 2*miroc_esm_chem_std_jet_loc, '*', 'markersize', 12)
+plot(13, 2*miroc_esm_std_jet_loc, '*', 'markersize', 12)
+plot(14, 2*miroc_esm_chem_std_jet_loc, '*', 'markersize', 12)
 plot(15, 2*miroc5_std_jet_loc, '*', 'markersize', 12)
 plot(16, 2*mpi_esm_lr_std_jet_loc, '*', 'markersize', 12)
 plot(17, 2*mpi_esm_mr_std_jet_loc, '*', 'markersize', 12)
@@ -321,8 +321,8 @@ plot(9, percentile(9), 'r*', 'markersize', 12)
 plot(10, percentile(10), 'r*', 'markersize', 12)
 plot(11, percentile(11), 'r*', 'markersize', 12)
 plot(12, percentile(12), 'r*', 'markersize', 12)
-%plot(13, percentile(13), 'r*', 'markersize', 12)
-%plot(14, percentile(14), 'r*', 'markersize', 12)
+plot(13, percentile(13), 'r*', 'markersize', 12)
+plot(14, percentile(14), 'r*', 'markersize', 12)
 plot(15, percentile(15), 'r*', 'markersize', 12)
 plot(16, percentile(16), 'r*', 'markersize', 12)
 plot(17, percentile(17), 'r*', 'markersize', 12)

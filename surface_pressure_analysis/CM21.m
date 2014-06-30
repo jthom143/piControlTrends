@@ -6,11 +6,7 @@ function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized, sam_tr
 
 % load /Users/jordanthomas/Desktop/Research/CM2.1/CM2.1_data/cm2.1.taux.slp.mat
 load /home/jthom143/CM2.1/CM2.1_data/cm2.1.taux.slp.mat
-<<<<<<< HEAD:CM21.m
-=======
 
-clear pathname_ps
->>>>>>> 3eb96ba66819fb464c85b7de1e8722b61aeb4149:surface_pressure_analysis/CM21.m
 
 
 % Not using wind stress

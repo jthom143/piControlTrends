@@ -48,4 +48,40 @@
 % save('CNRM_CM52_windstress.mat', 'taux', 'time', '-v7.3');
 
 load piControlData/CNRM_CM52/CNRM_CM52_windstress.mat
+load lat_lon.mat
+
+%% Change from single type to double type
+lat = double(lat);
+lon = double(lon);
+taux = double(taux);
+
+%% Change land values to be NaNs
+taux(taux>1e15)=NaN;
+
+%% Create lat and lon vectors 
+lat_matrix = lat;
+lon_matrix = lon;
+
+clear lat lon
+
+lat = lat_matrix(:,1);
+lon = lon_matrix(1,:);
+
+%% Create Useful time vectors
+time_year = 1:410;
+
+
+%% Jet Strength and Location Analysis
+
+[ ~, ~, ~, jet_ann, lat_jet_ann ] = taux_findmax( taux, lat, time );                                              
+
+%% Trend Analysis PDFs
+
+trend_period = 30;
+trend_length = 30;
+
+[jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs] = Windstress_Trends( time_year, jet_ann, lat_jet_ann, trend_period, trend_length );
+
+end
+
 

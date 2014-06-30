@@ -19,6 +19,8 @@ clear all
 addpath /home/jthom143/Tools/Functions
 addpath /home/jthom143/NCEPReanalysis1
 addpath /home/jthom143/NCEPReanalysis2
+addpath /data1/fesd1/jthom143/piControlTrends/surface_pressure_analysis
+
 
 %% Trend Analysis
 
@@ -33,14 +35,14 @@ addpath /home/jthom143/NCEPReanalysis2
 [ ipsl_cm5b_lr_sam_f  , ipsl_cm5b_lr_sam_xi  , ipsl_cm5b_lr_mean_sam  , ipsl_cm5b_lr_std_sam  , ipsl_cm5b_lr_time_year  , ipsl_cm5b_lr_SAM_unnormalized   , ipsl_cm5b_lr_sam_trends_yrs  ] = IPSL_CM5b_LR;
 [ miroc_esm_sam_f     , miroc_esm_sam_xi     , miroc_esm_mean_sam     , miroc_esm_std_sam     , miroc_esm_time_year     , miroc_esm_SAM_unnormalized      , miroc_esm_sam_trends_yrs     ] = MIROC_ESM;
 [ miroc_esm_chem_sam_f, miroc_esm_chem_sam_xi, miroc_esm_chem_mean_sam, miroc_esm_chem_std_sam, miroc_esm_chem_time_year, miroc_esm_chem_SAM_unnormalized , miroc_esm_chem_sam_trends_yrs] = MIROC_ESM_CHEM;
-[ mpi_cgcm3_sam_f     , mpi_cgcm3_sam_xi     , mpi_cgcm3_mean_sam     , mpi_cgcm3_std_sam     , mpi_cgcm3_time_year     , mpi_cgcm3_SAM_unnormalized      , mpi_cgcm3_sam_trends_yrs     ] = MPI_CGCM3;
+[ mpi_cgcm3_sam_f     , mpi_cgcm3_sam_xi     , mpi_cgcm3_mean_sam     , mpi_cgcm3_std_sam     , mpi_cgcm3_time_year     , mpi_cgcm3_SAM_unnormalized      , mpi_cgcm3_sam_trends_yrs     ] = MRI_CGCM3;
 [ mpi_esm_lr_sam_f    , mpi_esm_lr_sam_xi    , mpi_esm_lr_mean_sam    , mpi_esm_lr_std_sam    , mpi_esm_lr_time_year    , mpi_esm_lr_SAM_unnormalized     , mpi_esm_lr_sam_trends_yrs    ] = MPI_ESM_LR;
-[ mpi_esm_mr_sam_f    , mpi_esm_mr_sam_xi    , mpi_esm_mr_mean_sam    , mpi_esm_mr_std_sam    , mpi_esm_mr_time_year    , mpi_esm_mr_SAM_unnormalized     , mpi_esm_mr_sam_trends_yrs    ] = MPI_ESM_MR;
+%[ mpi_esm_mr_sam_f    , mpi_esm_mr_sam_xi    , mpi_esm_mr_mean_sam    , mpi_esm_mr_std_sam    , mpi_esm_mr_time_year    , mpi_esm_mr_SAM_unnormalized     , mpi_esm_mr_sam_trends_yrs    ] = MPI_ESM_MR;
 [ nor_esm1m_m_sam_f   , nor_esm1m_m_sam_xi   , nor_esm1m_m_mean_sam   , nor_esm1m_m_std_sam   , nor_esm1m_m_time_year   , nor_esm1m_m_SAM_unnormalized    , nor_esm1m_m_sam_trends_yrs   ] = NOR_ESM1m_M;
 [ nor_esm1m_me_sam_f  , nor_esm1m_me_sam_xi  , nor_esm1m_me_mean_sam  , nor_esm1m_me_std_sam  , nor_esm1m_me_time_year  , nor_esm1m_me_SAM_unnormalized   , nor_esm1m_me_sam_trends_yrs  ] = NOR_ESM1m_ME;
 
 [ cm2mc_sam_f         , cm2mc_sam_xi         , cm2mc_mean_sam         , cm2mc_std_sam         , cm2mc_time_year         , cm2mc_SAM_unnormalized ,cm2mc_sam_trends_yrs         ] = CM2Mc;
-[ cm21_sam_f          , cm21_sam_xi          , cm21_mean_sam          , cm21_std_sam          , cm21_time_year          , cm21_SAM_unnormalized ,cm21_sam_trends_yrs           ] = CM21;
+[ cm21_sam_f          , cm21_sam_xi          , cm21_mean_sam          , cm21_std_sam          , cm21_time_year          , cm21_SAM_unnormalized , cm21_sam_trends_yrs           ] = CM21;
 
 
 % NCEP Reanalyses 
@@ -67,7 +69,7 @@ plot(miroc_esm_sam_xi, miroc_esm_sam_f,'c-*')
 plot(miroc_esm_chem_sam_xi, miroc_esm_chem_sam_f, 'k-*')
 plot(mpi_cgcm3_sam_xi, mpi_cgcm3_sam_f, 'b-s')
 plot(mpi_esm_lr_sam_xi, mpi_esm_lr_sam_f,'g-s')
-plot(mpi_esm_mr_sam_xi, mpi_esm_mr_sam_f,'r-s')
+%plot(mpi_esm_mr_sam_xi, mpi_esm_mr_sam_f,'r-s')
 plot(nor_esm1m_m_sam_xi, nor_esm1m_m_sam_f,'c-s')
 plot(nor_esm1m_me_sam_xi, nor_esm1m_me_sam_f,'k-s')
 plot(cm2mc_sam_xi, cm2mc_sam_f, 'b')
@@ -76,7 +78,7 @@ hR1 = vline(sam_trend_30, '-k');
 hR2 = vline(sam_trend_30_2, '-.k');
 legend('CCSM4', 'CMCC CESM','CMCC CM', 'CMCC CMs', 'CNRM CM5', 'CNRM CM5-2', 'IPSL CM5a LR',...
        'IPSL CM5a MR', 'IPSL CM5b LR', 'MIROC ESM', 'MIROC ESM CHEM', 'MPI CGCM3', ...
-       'MPI ESM LR', 'MPI ESM MR', 'NOR ESM1m M', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
+       'MPI ESM LR', 'NOR ESM1m M', 'NOR ESM1m ME', 'CM2Mc', 'CM2.1')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 895])
 xlabel('30 Year Linear Trend (Pa/30 years)', 'fontsize', 12)
@@ -96,7 +98,7 @@ miroc_esm_probability      = miroc_esm_sam_f     (findnearest(miroc_esm_sam_xi, 
 miroc_esm_chem_probability = miroc_esm_chem_sam_f(findnearest(miroc_esm_chem_sam_xi, sam_trend_30))*100;
 mpi_cgcm3_probability      = mpi_cgcm3_sam_f     (findnearest(mpi_cgcm3_sam_xi,      sam_trend_30))*100;
 mpi_esm_lr_probability     = mpi_esm_lr_sam_f    (findnearest(mpi_esm_lr_sam_xi,     sam_trend_30))*100;
-mpi_esm_mr_probability     = mpi_esm_mr_sam_f    (findnearest(mpi_esm_mr_sam_xi,     sam_trend_30))*100;
+%mpi_esm_mr_probability     = mpi_esm_mr_sam_f    (findnearest(mpi_esm_mr_sam_xi,     sam_trend_30))*100;
 nor_esm1m_m_probability    = nor_esm1m_m_sam_f   (findnearest(nor_esm1m_m_sam_xi,    sam_trend_30))*100;
 nor_esm1m_me_probability   = nor_esm1m_me_sam_f  (findnearest(nor_esm1m_me_sam_xi,       sam_trend_30))*100;
 
@@ -127,7 +129,7 @@ Trends(9, 1:length(ipsl_cm5b_lr_sam_trends_yrs)) = ipsl_cm5b_lr_sam_trends_yrs;
 Trends(10, 1:length(miroc_esm_sam_trends_yrs)) = miroc_esm_sam_trends_yrs;
 Trends(11, 1:length(miroc_esm_chem_sam_trends_yrs)) = miroc_esm_chem_sam_trends_yrs;
 Trends(12, 1:length(mpi_esm_lr_sam_trends_yrs)) = mpi_esm_lr_sam_trends_yrs;
-Trends(13, 1:length(mpi_esm_mr_sam_trends_yrs)) = mpi_esm_mr_sam_trends_yrs;
+%Trends(13, 1:length(mpi_esm_mr_sam_trends_yrs)) = mpi_esm_mr_sam_trends_yrs;
 Trends(14, 1:length(mpi_cgcm3_sam_trends_yrs)) = mpi_cgcm3_sam_trends_yrs;
 Trends(15, 1:length(nor_esm1m_m_sam_trends_yrs)) = nor_esm1m_m_sam_trends_yrs;
 Trends(16, 1:length(nor_esm1m_me_sam_trends_yrs)) = nor_esm1m_me_sam_trends_yrs;
@@ -158,7 +160,7 @@ plot(9, 2*ipsl_cm5b_lr_std_sam, '*', 'markersize', 12)
 plot(10, 2*miroc_esm_std_sam, '*', 'markersize', 12)
 plot(11, 2*miroc_esm_chem_std_sam, '*', 'markersize', 12)
 plot(12, 2*mpi_esm_lr_std_sam, '*', 'markersize', 12)
-plot(13, 2*mpi_esm_mr_std_sam, '*', 'markersize', 12)
+%plot(13, 2*mpi_esm_mr_std_sam, '*', 'markersize', 12)
 plot(14, 2*mpi_cgcm3_std_sam, '*', 'markersize', 12)
 plot(15, 2*nor_esm1m_m_std_sam, '*', 'markersize', 12)
 plot(16, 2*nor_esm1m_me_std_sam, '*', 'markersize', 12)
@@ -181,7 +183,7 @@ plot(9, percentile(9), 'r*', 'markersize', 12)
 plot(10, percentile(10), 'r*', 'markersize', 12)
 plot(11, percentile(11), 'r*', 'markersize', 12)
 plot(12, percentile(12), 'r*', 'markersize', 12)
-plot(13, percentile(13), 'r*', 'markersize', 12)
+%plot(13, percentile(13), 'r*', 'markersize', 12)
 plot(14, percentile(14), 'r*', 'markersize', 12)
 plot(15, percentile(15), 'r*', 'markersize', 12)
 plot(16, percentile(16), 'r*', 'markersize', 12)
@@ -300,11 +302,11 @@ xlim([0 1000])
 ylim([0 50])
 title('MPI ESM LR', 'fontsize', 12)
 
-subplot(4,4,14)
-plot(mpi_esm_mr_time_year, mpi_esm_mr_SAM_unnormalized)
-xlim([0 1000])
-ylim([0 50])
-title('MPI ESM MR', 'fontsize', 12)
+% subplot(4,4,14)
+% plot(mpi_esm_mr_time_year, mpi_esm_mr_SAM_unnormalized)
+% xlim([0 1000])
+% ylim([0 50])
+% title('MPI ESM MR', 'fontsize', 12)
 
 subplot(4,4,15)
 plot(nor_esm1m_m_time_year, nor_esm1m_m_SAM_unnormalized)

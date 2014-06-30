@@ -4,7 +4,7 @@ function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized , sam_t
 
 %% Import Data
 current_path = pwd;
-pathname_ps = fullfile(current_path,'piControlData/CMCC_CM_ps.cdf');
+pathname_ps = fullfile(current_path,'piControlData/CMCC_CM/CMCC_CM_ps.cdf');
 
 ps = ncread(pathname_ps, 'ps');                 % Pa
 time = ncread(pathname_ps, 'T');                % Months since 1800
