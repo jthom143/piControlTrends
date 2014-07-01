@@ -24,7 +24,7 @@ clear ps
 
 %% Create Useful time vectors
 
-time_year = 1:501;
+time_year = 1:200;
 
 clear time 
 

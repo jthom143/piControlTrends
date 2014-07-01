@@ -1,4 +1,4 @@
-function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized ] = GFDL_ESM2M
+function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized, sam_trends_yrs ] = GFDL_ESM2M
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -23,7 +23,7 @@ clear ps
 
 %% Create Useful time vectors
 
-time_year = 1:501;
+time_year = 1:500;
 
 clear time 
 
@@ -42,7 +42,7 @@ SAM_unnormalized = squeeze(nanmean(reshape(SAM_mon_unnormalized, 12, []),1));
 trend_period = 30;
 trend_length = 30;
 
-[ sam_f, sam_xi, mean_sam, std_sam] = SAM_Trends( time_year, SAM_unnormalized, trend_period, trend_length );
+[ sam_f, sam_xi, mean_sam, std_sam, sam_trends_yrs] = SAM_Trends( time_year, SAM_unnormalized, trend_period, trend_length );
 
 
 end
