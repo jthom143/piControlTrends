@@ -363,5 +363,5 @@ set(gcf, 'position', [100, 100, 1049, 495])
     top = 1-squeeze;
     set(gca, 'OuterPosition', [left bottom right top])
     
-    beep
+
         
