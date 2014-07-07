@@ -1,4 +1,4 @@
- function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year ] = MPI_ESM_MR_taux
+ function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year, jet_ann, lat_jet_ann ] = MPI_ESM_MR_taux
 
 %MPI_ESM_MR_taux loads in the windstress data for the MPI ESM MR model and calculates the westerly wind jet and location and then calcuates the trend pdfs for these two variables. 
 

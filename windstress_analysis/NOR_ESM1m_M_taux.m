@@ -6,8 +6,8 @@ clear all
 
 %% Import Data
 current_path = pwd;
-pathname_taux1 = fullfile(current_path, 'piControlData/NOR_ESM1m_M_windstress/data(10).cdf');     % CDF file from Lamont website
-pathname_taux2 = fullfile(current_path, 'piControlData/NOR_ESM1m_M_windstress/data(11).cdf');     % CDF file from Lamont website
+pathname_taux1 = fullfile(current_path, 'piControlData/NOR_ESM1m_M/data.cdf');     % CDF file from Lamont website
+pathname_taux2 = fullfile(current_path, 'piControlData/NOR_ESM1m_M/data(1).cdf');     % CDF file from Lamont website
 
 %pathname_coord = fullfile(current_path, 'piControlData/');                      % CDF file from Lamont website does not contain lat and lon variables. 'pathname_coord' file downloaded from ESGF website to obtain these variables.
 
@@ -30,9 +30,7 @@ time = cat(1, time1, time2);
 clear current_path pathname_taux1 pathname_taux2
 clear taux1 taux2 time1 time2
 
-cd NewFiles
 
 save('NOR_ESM1m_M_windstress.mat', 'taux', 'time', '-v7.3');
-cd /Users/jordanthomas/piControlTrends
 
 

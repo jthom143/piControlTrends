@@ -1,4 +1,4 @@
- function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year ] = MIROC_ESM_taux
+ function [ jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs, time_year, jet_ann, lat_jet_ann ] = MIROC_ESM_taux
 
 %MIROC_ESM_taux loads in the windstress data for the CNRM CM5 2 model and calculates the westerly wind jet and location and then calcuates the trend pdfs for these two variables. 
 
@@ -27,7 +27,7 @@ taux(taux>1e15)=NaN;
 
 
 %% Create Useful time vectors
-time_year = 1:621;
+time_year = 1:630;
 
 
 %% Jet Strength and Location Analysis
