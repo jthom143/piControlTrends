@@ -156,10 +156,10 @@ Trends(22, 1:length(cm21_sam_trends_yrs)) = cm21_sam_trends_yrs;
 
 
 Models = {'CanESM2';'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
-    'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MPI CGCM3';'MPI ESM LR'; 'MPI ESM MR'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
+    'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MPI ESM LR'; 'MPI ESM MR';'MRI CGCM3'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
     'CM2Mc'; 'CM2.1'};
 
-percentile = prctile(Trends, 95, 1);
+percentile_sam = prctile(Trends, 95, 1);
 
 
 figure(2)
@@ -191,28 +191,28 @@ xlim([0,23])
 hR1 = hline(sam_trend_30, '-k');
 hR2 = hline(sam_trend_30_2, '-.k');
 
-h2 = plot(1, percentile(1), 'r*', 'markersize', 12);
-plot(2, percentile(2), 'r*', 'markersize', 12)
-plot(3, percentile(3), 'r*', 'markersize', 12)
-plot(4, percentile(4), 'r*', 'markersize', 12)
-plot(5, percentile(5), 'r*', 'markersize', 12)
-plot(6, percentile(6), 'r*', 'markersize', 12)
-plot(7, percentile(7), 'r*', 'markersize', 12)
-plot(8, percentile(8), 'r*', 'markersize', 12)
-plot(9, percentile(9), 'r*', 'markersize', 12)
-plot(10, percentile(10), 'r*', 'markersize', 12)
-plot(11, percentile(11), 'r*', 'markersize', 12)
-plot(12, percentile(12), 'r*', 'markersize', 12)
-plot(13, percentile(13), 'r*', 'markersize', 12)
-plot(14, percentile(14), 'r*', 'markersize', 12)
-plot(15, percentile(15), 'r*', 'markersize', 12)
-plot(16, percentile(16), 'r*', 'markersize', 12)
-plot(17, percentile(17), 'r*', 'markersize', 12)
-plot(18, percentile(18), 'r*', 'markersize', 12)
-plot(19, percentile(19), 'r*', 'markersize', 12)
-plot(20, percentile(20), 'r*', 'markersize', 12)
-plot(21, percentile(21), 'r*', 'markersize', 12)
-plot(22, percentile(22), 'r*', 'markersize', 12)
+h2 = plot(1, percentile_sam(1), 'r*', 'markersize', 12);
+plot(2, percentile_sam(2), 'r*', 'markersize', 12)
+plot(3, percentile_sam(3), 'r*', 'markersize', 12)
+plot(4, percentile_sam(4), 'r*', 'markersize', 12)
+plot(5, percentile_sam(5), 'r*', 'markersize', 12)
+plot(6, percentile_sam(6), 'r*', 'markersize', 12)
+plot(7, percentile_sam(7), 'r*', 'markersize', 12)
+plot(8, percentile_sam(8), 'r*', 'markersize', 12)
+plot(9, percentile_sam(9), 'r*', 'markersize', 12)
+plot(10, percentile_sam(10), 'r*', 'markersize', 12)
+plot(11, percentile_sam(11), 'r*', 'markersize', 12)
+plot(12, percentile_sam(12), 'r*', 'markersize', 12)
+plot(13, percentile_sam(13), 'r*', 'markersize', 12)
+plot(14, percentile_sam(14), 'r*', 'markersize', 12)
+plot(15, percentile_sam(15), 'r*', 'markersize', 12)
+plot(16, percentile_sam(16), 'r*', 'markersize', 12)
+plot(17, percentile_sam(17), 'r*', 'markersize', 12)
+plot(18, percentile_sam(18), 'r*', 'markersize', 12)
+plot(19, percentile_sam(19), 'r*', 'markersize', 12)
+plot(20, percentile_sam(20), 'r*', 'markersize', 12)
+plot(21, percentile_sam(21), 'r*', 'markersize', 12)
+plot(22, percentile_sam(22), 'r*', 'markersize', 12)
 
 set(gca, 'XTick', 0:23)
 set(gca, 'XTickLabel', model_labels)

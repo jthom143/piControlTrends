@@ -126,10 +126,10 @@ Trends(21, 1:length(cm2mc_jet_trends_yrs)) = cm2mc_jet_trends_yrs;
 Trends(22, 1:length(cm21_jet_trends_yrs)) = cm21_jet_trends_yrs;
 
 Models = {'CanESM2'; 'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
-    'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MRI CGCM3';'MPI ESM LR'; 'MPI ESM MR'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
+    'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MPI ESM LR'; 'MPI ESM MR';'MRI CGCM3'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
     'CM2Mc'; 'CM2.1'};
 
-percentile = prctile(Trends, 95, 1);
+percentile_jet = prctile(Trends, 95, 1);
 
 
 figure(2)
@@ -161,28 +161,28 @@ xlim([0,23])
 hR1 = hline(taux_trend_30, '-k');
 hR2 = hline(taux_trend_30_2, '-.k');
 
-h2 = plot(1, percentile(1), 'r*', 'markersize', 12);
-plot(2, percentile(2), 'r*', 'markersize', 12)
-plot(3, percentile(3), 'r*', 'markersize', 12)
-plot(4, percentile(4), 'r*', 'markersize', 12)
-plot(5, percentile(5), 'r*', 'markersize', 12)
-plot(6, percentile(6), 'r*', 'markersize', 12)
-plot(7, percentile(7), 'r*', 'markersize', 12)
-plot(8, percentile(8), 'r*', 'markersize', 12)
-plot(9, percentile(9), 'r*', 'markersize', 12)
-plot(10, percentile(10), 'r*', 'markersize', 12)
-plot(11, percentile(11), 'r*', 'markersize', 12)
-plot(12, percentile(12), 'r*', 'markersize', 12)
-plot(13, percentile(13), 'r*', 'markersize', 12)
-plot(14, percentile(14), 'r*', 'markersize', 12)
-plot(15, percentile(15), 'r*', 'markersize', 12)
-plot(16, percentile(16), 'r*', 'markersize', 12)
-plot(17, percentile(17), 'r*', 'markersize', 12)
-plot(18, percentile(18), 'r*', 'markersize', 12)
+h2 = plot(1, percentile_jet(1), 'r*', 'markersize', 12);
+plot(2, percentile_jet(2), 'r*', 'markersize', 12)
+plot(3, percentile_jet(3), 'r*', 'markersize', 12)
+plot(4, percentile_jet(4), 'r*', 'markersize', 12)
+plot(5, percentile_jet(5), 'r*', 'markersize', 12)
+plot(6, percentile_jet(6), 'r*', 'markersize', 12)
+plot(7, percentile_jet(7), 'r*', 'markersize', 12)
+plot(8, percentile_jet(8), 'r*', 'markersize', 12)
+plot(9, percentile_jet(9), 'r*', 'markersize', 12)
+plot(10, percentile_jet(10), 'r*', 'markersize', 12)
+plot(11, percentile_jet(11), 'r*', 'markersize', 12)
+plot(12, percentile_jet(12), 'r*', 'markersize', 12)
+plot(13, percentile_jet(13), 'r*', 'markersize', 12)
+plot(14, percentile_jet(14), 'r*', 'markersize', 12)
+plot(15, percentile_jet(15), 'r*', 'markersize', 12)
+plot(16, percentile_jet(16), 'r*', 'markersize', 12)
+plot(17, percentile_jet(17), 'r*', 'markersize', 12)
+plot(18, percentile_jet(18), 'r*', 'markersize', 12)
 %plot(19, percentile(19), 'r*', 'markersize', 12)
-plot(20, percentile(20), 'r*', 'markersize', 12)
-plot(21, percentile(21), 'r*', 'markersize', 12)
-plot(22, percentile(22), 'r*', 'markersize', 12)
+plot(20, percentile_jet(20), 'r*', 'markersize', 12)
+plot(21, percentile_jet(21), 'r*', 'markersize', 12)
+plot(22, percentile_jet(22), 'r*', 'markersize', 12)
 
 set(gca, 'XTick', 0:23)
 set(gca, 'XTickLabel', model_labels)
@@ -216,11 +216,12 @@ set(gcf, 'position', [100, 100, 1049, 495])
     bottom = squeeze;
     top = 1-squeeze;
     set(gca, 'OuterPosition', [left bottom right top])
+
     
     
     %% Jet Position
     
-figure(4)
+figure(5)
 plot(can_esm2_jet_loc_xi, can_esm2_jet_loc_f, 'r-.')
 hold on
 plot(ccsm4_jet_loc_xi, ccsm4_jet_loc_f, 'b-o' )
@@ -281,10 +282,10 @@ Trends(21, 1:length(cm2mc_jet_loc_trends_yrs)) = cm2mc_jet_loc_trends_yrs;
 Trends(22, 1:length(cm21_jet_loc_trends_yrs)) = cm21_jet_loc_trends_yrs;
 
 
-percentile = prctile(Trends, 95, 1);
+percentile_loc = prctile(Trends, 95, 1);
 
 
-figure(5)
+figure(6)
 h1 = plot(1, 2*can_esm2_std_jet_loc, '*', 'markersize', 12);
 hold on
 plot(2, 2*ccsm4_std_jet_loc, '*', 'markersize', 12)
@@ -313,28 +314,28 @@ xlim([0,23])
 hR1 = hline(lat_trend_30, '-k');
 hR2 = hline(lat_trend_30_2, '-.k');
 
-h2 = plot(1, percentile(1), 'r*', 'markersize', 12);
-plot(2, percentile(2), 'r*', 'markersize', 12)
-plot(3, percentile(3), 'r*', 'markersize', 12)
-plot(4, percentile(4), 'r*', 'markersize', 12)
-plot(5, percentile(5), 'r*', 'markersize', 12)
-plot(6, percentile(6), 'r*', 'markersize', 12)
-plot(7, percentile(7), 'r*', 'markersize', 12)
-plot(8, percentile(8), 'r*', 'markersize', 12)
-plot(9, percentile(9), 'r*', 'markersize', 12)
-plot(10, percentile(10), 'r*', 'markersize', 12)
-plot(11, percentile(11), 'r*', 'markersize', 12)
-plot(12, percentile(12), 'r*', 'markersize', 12)
-plot(13, percentile(13), 'r*', 'markersize', 12)
-plot(14, percentile(14), 'r*', 'markersize', 12)
-plot(15, percentile(15), 'r*', 'markersize', 12)
-plot(16, percentile(16), 'r*', 'markersize', 12)
-plot(17, percentile(17), 'r*', 'markersize', 12)
-plot(18, percentile(18), 'r*', 'markersize', 12)
+h2 = plot(1, percentile_loc(1), 'r*', 'markersize', 12);
+plot(2, percentile_loc(2), 'r*', 'markersize', 12)
+plot(3, percentile_loc(3), 'r*', 'markersize', 12)
+plot(4, percentile_loc(4), 'r*', 'markersize', 12)
+plot(5, percentile_loc(5), 'r*', 'markersize', 12)
+plot(6, percentile_loc(6), 'r*', 'markersize', 12)
+plot(7, percentile_loc(7), 'r*', 'markersize', 12)
+plot(8, percentile_loc(8), 'r*', 'markersize', 12)
+plot(9, percentile_loc(9), 'r*', 'markersize', 12)
+plot(10, percentile_loc(10), 'r*', 'markersize', 12)
+plot(11, percentile_loc(11), 'r*', 'markersize', 12)
+plot(12, percentile_loc(12), 'r*', 'markersize', 12)
+plot(13, percentile_loc(13), 'r*', 'markersize', 12)
+plot(14, percentile_loc(14), 'r*', 'markersize', 12)
+plot(15, percentile_loc(15), 'r*', 'markersize', 12)
+plot(16, percentile_loc(16), 'r*', 'markersize', 12)
+plot(17, percentile_loc(17), 'r*', 'markersize', 12)
+plot(18, percentile_loc(18), 'r*', 'markersize', 12)
 %plot(19, percentile(19), 'r*', 'markersize', 12)
-plot(20, percentile(20), 'r*', 'markersize', 12)
-plot(21, percentile(21), 'r*', 'markersize', 12)
-plot(22, percentile(22), 'r*', 'markersize', 12)
+plot(20, percentile_loc(20), 'r*', 'markersize', 12)
+plot(21, percentile_loc(21), 'r*', 'markersize', 12)
+plot(22, percentile_loc(22), 'r*', 'markersize', 12)
 
 set(gca, 'XTick', 0:23)
 set(gca, 'XTickLabel', model_labels)
@@ -346,7 +347,7 @@ rotateXLabels( gca(), 45 )
 title('Jet Location Statistics', 'fontsize', 20)
 
 
-figure(6)
+figure(7)
 boxplot(Trends', Models)
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
@@ -369,7 +370,7 @@ set(gcf, 'position', [100, 100, 1049, 495])
     set(gca, 'OuterPosition', [left bottom right top])
     
  
-figure(7)
+figure(8)
 subplot(5,4,1)
 plot(can_esm2_time_year, can_esm2_jet_ann)
 xlim([0 996])
@@ -495,7 +496,7 @@ set(gcf, 'position', [100, 100, 1049, 895])
 
         
 %% Jet Location Timeseries  
-figure(8)
+figure(9)
 subplot(5,4,1)
 plot(can_esm2_time_year, can_esm2_jet_loc_ann)
 xlim([0 996])
@@ -619,7 +620,7 @@ title('NOR ESM1m ME', 'fontsize', 12)
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 895])
 
-figure
+figure(10)
 plot(can_esm2_jet_ann, 'b')
 hold on
 plot(ccsm4_jet_ann, 'g')
