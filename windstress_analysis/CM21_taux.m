@@ -10,7 +10,7 @@ load /home/jthom143/CM2.1/CM2.1_data/cm2.1.taux.slp.mat
 
 % Not using slp
 
-clear slp lon taux_ann
+clear slp taux_ann
 
 taux = tau_x;
 time = time_month;

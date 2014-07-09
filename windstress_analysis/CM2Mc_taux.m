@@ -9,6 +9,7 @@ pathname_taux = '/home/jthom143/CM2Mc/Analysis2/Data/cm2mc_taux.nc';
 taux = ncread(pathname_taux, 'TAU_X');                 % Pa
 lat = ncread(pathname_taux, 'YU_OCEAN');         % Degrees
 time = ncread(pathname_taux, 'TIME1');
+lon = ncread(pathname_taux, 'XU_OCEAN');
 
 
 clear pathname_taux
