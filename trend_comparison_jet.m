@@ -47,8 +47,8 @@ addpath /data1/fesd1/jthom143/piControlTrends/windstress_analysis
  [ nor_esm1m_me_jet_f    , nor_esm1m_me_jet_xi    , nor_esm1m_me_mean_jet    , nor_esm1m_me_std_jet    , nor_esm1m_me_jet_trends_yrs   , nor_esm1m_me_jet_loc_f        , nor_esm1m_me_jet_loc_xi       , nor_esm1m_me_mean_jet_loc   , nor_esm1m_me_std_jet_loc   , nor_esm1m_me_jet_loc_trends_yrs   , nor_esm1m_me_time_year   , nor_esm1m_me_jet_ann   , nor_esm1m_me_jet_loc_ann]   = NOR_ESM1m_ME_taux;
 
 % GFDL Models
- [ cm2mc_jet_f    , cm2mc_jet_xi    , cm2mc_mean_jet    , cm2mc_std_jet    , cm2mc_jet_trends_yrs   , cm2mc_jet_loc_f        , cm2mc_jet_loc_xi       , cm2mc_mean_jet_loc   , cm2mc_std_jet_loc   , cm2mc_jet_loc_trends_yrs   , cm2mc_time_year    ] = CM2Mc_taux;
- [ cm21_jet_f    , cm21_jet_xi    , cm21_mean_jet    , cm21_std_jet    , cm21_jet_trends_yrs   , cm21_jet_loc_f        , cm21_jet_loc_xi       , cm21_mean_jet_loc   , cm21_std_jet_loc   , cm21_jet_loc_trends_yrs   , cm21_time_year    ] = CM21_taux;
+ [ cm2mc_jet_f    , cm2mc_jet_xi    , cm2mc_mean_jet    , cm2mc_std_jet    , cm2mc_jet_trends_yrs   , cm2mc_jet_loc_f        , cm2mc_jet_loc_xi       , cm2mc_mean_jet_loc   , cm2mc_std_jet_loc   , cm2mc_jet_loc_trends_yrs   , cm2mc_time_year, cm2mc_jet_ann, cm2mc_jet_loc_ann    ] = CM2Mc_taux;
+ [ cm21_jet_f    , cm21_jet_xi    , cm21_mean_jet    , cm21_std_jet    , cm21_jet_trends_yrs   , cm21_jet_loc_f        , cm21_jet_loc_xi       , cm21_mean_jet_loc   , cm21_std_jet_loc   , cm21_jet_loc_trends_yrs   , cm21_time_year, cm21_jet_ann, cm21_jet_loc_ann    ] = CM21_taux;
 
  
 % NCEP Reanalyses 
@@ -499,43 +499,43 @@ figure(8)
 subplot(5,4,1)
 plot(can_esm2_time_year, can_esm2_jet_loc_ann)
 xlim([0 996])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CanESM2', 'fontsize', 12)
 
 subplot(5,4,2)
 plot(ccsm4_time_year, ccsm4_jet_loc_ann)
 xlim([0 501])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CCSM4', 'fontsize', 12)
 
 subplot(5,4,3)
 plot(cmcc_cesm_time_year, cmcc_cesm_jet_loc_ann)
 xlim([0 277])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CMCC CESM', 'fontsize', 12)
 
 subplot(5,4,4)
 plot(cmcc_cm_time_year, cmcc_cm_jet_loc_ann)
 xlim([0 330])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CMCC CM', 'fontsize', 12)
 
 subplot(5,4,5)
 plot(cmcc_cms_time_year, cmcc_cms_jet_loc_ann)
 xlim([0 500])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CMCC CMs', 'fontsize', 12)
 
 subplot(5,4,6)
 plot(cnrm_cm5_time_year, cnrm_cm5_jet_loc_ann)
 xlim([0 850])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CNRM CM5', 'fontsize', 12)
 
 subplot(5,4,7)
 plot(cnrm_cm52_time_year, cnrm_cm52_jet_loc_ann)
 xlim([0 359])
-ylim([-70 -40])
+ylim([-80 -40])
 title('CNRM CM5-2', 'fontsize', 12)
 
 subplot(5,4,8)
@@ -547,61 +547,61 @@ title('GFDL ESM2G', 'fontsize', 12)
 subplot(5,4,9)
 plot(gfdl_esm2m_time_year, gfdl_esm2m_jet_loc_ann)
 xlim([0 500])
-ylim([-70 -40])
+ylim([-80 -40])
 title('GFDL ESM2M', 'fontsize', 12)
 
 subplot(5,4,10)
 plot(ipsl_cm5a_lr_time_year, ipsl_cm5a_lr_jet_loc_ann)
 xlim([0 1000])
-ylim([-70 -40])
+ylim([-80 -40])
 title('IPSL CM5a LR', 'fontsize', 12)
 
 subplot(5,4,11)
 plot(ipsl_cm5a_mr_time_year, ipsl_cm5a_mr_jet_loc_ann)
 xlim([0 300])
-ylim([-70 -40])
+ylim([-80 -40])
 title('IPSL CM5a MR', 'fontsize', 12)
 
 subplot(5,4,12)
 plot(ipsl_cm5b_lr_time_year, ipsl_cm5b_lr_jet_loc_ann)
 xlim([0 300])
-ylim([-70 -40])
+ylim([-80 -40])
 title('IPSL CM5b LR', 'fontsize', 12)
 
 subplot(5,4,13)
 plot(miroc_esm_time_year, miroc_esm_jet_loc_ann)
 xlim([0 531])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MIROC ESM', 'fontsize', 12)
 
 subplot(5,4,14)
 plot(miroc_esm_chem_time_year, miroc_esm_chem_jet_loc_ann)
 xlim([0 255])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MIROC ESM CHEM', 'fontsize', 12)
 
 subplot(5,4,15)
 plot(miroc5_time_year, miroc5_jet_loc_ann)
 xlim([0 200])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MIROC5', 'fontsize', 12)
 
 subplot(5,4,16)
 plot(mri_cgcm3_time_year, mri_cgcm3_jet_loc_ann)
 xlim([0 200])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MRI CGCM3', 'fontsize', 12)
 
 subplot(5,4,17)
 plot(mpi_esm_lr_time_year, mpi_esm_lr_jet_loc_ann)
 xlim([0 1000])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MPI ESM LR', 'fontsize', 12)
 
 subplot(5,4,18)
 plot(mpi_esm_mr_time_year, mpi_esm_mr_jet_loc_ann)
 xlim([0 1000])
-ylim([-70 -40])
+ylim([-80 -40])
 title('MPI ESM MR', 'fontsize', 12)
 
 % subplot(5,4,19)
@@ -613,7 +613,7 @@ title('MPI ESM MR', 'fontsize', 12)
 subplot(5,4,20)
 plot(nor_esm1m_me_time_year, nor_esm1m_me_jet_loc_ann)
 xlim([0 252])
-ylim([-70 -40])
+ylim([-80 -40])
 title('NOR ESM1m ME', 'fontsize', 12)
 
 set(gca, 'fontsize', 12)
