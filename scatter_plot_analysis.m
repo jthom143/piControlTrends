@@ -29,6 +29,7 @@ plot(can_esm2_jet_loc_trends_yrs, can_esm2_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CanESM2_scatter_trends.eps')
 
 %% CCSM4
 
@@ -49,6 +50,7 @@ plot(cmcc_cesm_jet_loc_trends_yrs, cmcc_cesm_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CESM_scatter_trends.eps')
 
 %% CMCC CM
 
@@ -64,6 +66,7 @@ plot(cmcc_cm_jet_loc_trends_yrs, cmcc_cm_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CM_scatter_trends.eps')
 
 %% CMCC CMs
 
@@ -79,6 +82,7 @@ plot(cmcc_cms_jet_loc_trends_yrs, cmcc_cms_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CMs_scatter_trends.eps')
 
 %% CNRM CM5
 
@@ -95,7 +99,7 @@ plot(cnrm_cm5_jet_loc_trends_yrs, cnrm_cm5_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
-
+print('-depsc', 'CNRM_CM5_scatter_trends.eps')
 
 %% CNRM CM52
 
@@ -128,6 +132,7 @@ plot(gfdl_esm2g_jet_loc_trends_yrs, gfdl_esm2g_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'GFDL_ESM2G_scatter_trends.eps')
 
 %% GFDL ESM2M
 
@@ -143,6 +148,7 @@ plot(gfdl_esm2m_jet_loc_trends_yrs, gfdl_esm2m_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'GFDL_ESM2M_scatter_trends.eps')
 
 %% IPSL CM5a LR
 
@@ -158,7 +164,7 @@ plot(ipsl_cm5a_lr_jet_loc_trends_yrs, ipsl_cm5a_lr_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
-
+print('-depsc', 'IPSL_CM5a_LR_scatter_trends.eps')
 
 %% IPSL CM5a MR
 
@@ -174,7 +180,7 @@ plot(ipsl_cm5a_mr_jet_loc_trends_yrs, ipsl_cm5a_mr_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
-
+print('-depsc', 'IPSL_CM5a_MR_scatter_trends.eps')
 
 %% IPSL CM5b LR
 
@@ -190,7 +196,7 @@ plot(ipsl_cm5b_lr_jet_loc_trends_yrs, ipsl_cm5b_lr_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
-
+print('-depsc', 'IPSL_CM5b_LR_scatter_trends.eps')
 
 %% MIROC ESM
 
@@ -223,6 +229,7 @@ plot(miroc_esm_chem_jet_loc_trends_yrs, miroc_esm_chem_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MIROC_ESM_CHEM_scatter_trends.eps')
 
 %% MIROC5
 
@@ -255,6 +262,7 @@ plot(mri_cgcm3_jet_loc_trends_yrs, mpi_cgcm3_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MRI_CGCM3_scatter_trends.eps')
 
 %% MPI ESM LR
 % 
@@ -285,6 +293,7 @@ plot(mpi_esm_mr_jet_loc_trends_yrs, mpi_esm_mr_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MPI_ESM_MR_scatter_trends.eps')
 
 %% NOR ESM1m M
 
@@ -304,6 +313,7 @@ plot(nor_esm1m_me_jet_loc_trends_yrs, nor_esm1m_me_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'NOR_ESM1m_ME_scatter_trends.eps')
 
 
 %% CM2Mc
@@ -320,6 +330,7 @@ plot(cm2mc_jet_loc_trends_yrs, cm2mc_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CM2Mc_scatter_trends.eps')
 
 %% CM2.1
 
@@ -336,6 +347,7 @@ plot(cm21_jet_loc_trends_yrs, cm21_sam_trends_yrs, '*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CM2.1_scatter_trends.eps')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fields
@@ -355,6 +367,8 @@ plot(can_esm2_jet_loc_ann, can_esm2_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CanESM2_scatter.eps')
+
 
 %% CCSM4
 
@@ -374,6 +388,8 @@ plot(cmcc_cesm_jet_loc_ann, cmcc_cesm_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CESM_scatter.eps')
+
 
 %% CMCC CM
 
@@ -389,6 +405,8 @@ plot(cmcc_cm_jet_loc_ann, cmcc_cm_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CM_scatter.eps')
+
 
 %% CMCC CMs
 
@@ -404,6 +422,8 @@ plot(cmcc_cms_jet_loc_ann, cmcc_csm_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CMCC_CMs_scatter.eps')
+
 
 %% CNRM CM5
 
@@ -420,6 +440,7 @@ plot(cnrm_cm5_jet_loc_ann, cnrm_cm5_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CNRM_CM5_scatter.eps')
 
 
 %% CNRM CM52
@@ -453,6 +474,8 @@ plot(gfdl_esm2g_jet_loc_ann, gfdl_esm2g_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'GFDL_ESM2G_scatter.eps')
+
 
 %% GFDL ESM2M
 
@@ -468,6 +491,8 @@ plot(gfdl_esm2m_jet_loc_ann, gfdl_esm2m_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'GFDL_ESM2M_scatter.eps')
+
 
 %% IPSL CM5a LR
 
@@ -483,6 +508,8 @@ plot(ipsl_cm5a_lr_jet_loc_ann, ipsl_cm5a_lr_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'IPSL_CM5a_LR_scatter.eps')
+
 
 
 %% IPSL CM5a MR
@@ -499,6 +526,8 @@ plot(ipsl_cm5a_mr_jet_loc_ann, ipsl_cm5a_mr_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'IPSL_CM5a_MR_scatter.eps')
+
 
 
 %% IPSL CM5b LR
@@ -516,6 +545,8 @@ plot(ipsl_cm5b_lr_jet_loc_ann, ipsl_cm5b_lr_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'IPSL_CM5b_LR_scatter.eps')
+
 
 
 %% MIROC ESM
@@ -549,6 +580,8 @@ plot(miroc_esm_chem_jet_loc_ann, miroc_esm_chem_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MIROC_ESM_CHEM_scatter.eps')
+
 
 %% MIROC5
 
@@ -581,6 +614,9 @@ plot(mri_cgcm3_jet_loc_ann, mpi_cgcm3_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MRI_CGCM3_scatter.eps')
+
+
 
 %% MPI ESM LR
 % 
@@ -611,6 +647,8 @@ plot(mpi_esm_mr_jet_loc_ann, mpi_esm_mr_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'MPI_ESM_MR_scatter.eps')
+
 
 %% NOR ESM1m M
 
@@ -630,35 +668,41 @@ plot(nor_esm1m_me_jet_loc_ann, nor_esm1m_me_SAM_unnormalized, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'NOR_ESM1m_ME_scatter.eps')
 
 
-%% CM2Mc
-% 
-% figure
-% subplot(1,2,1)
-% plot(cm2mc_jet_trends_yrs, cm2mc_sam_trends_yrs, '*')
-% ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
-% xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
-% 
-% 
-% subplot(1,2,2)
-% plot(cm2mc_jet_loc_trends_yrs, cm2mc_sam_trends_yrs, '*')
-% set(gca, 'fontsize', 12)
-% set(gcf, 'position', [100, 100, 1049, 495])
-% xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
-% 
-% %% CM2.1
-% 
-% 
-% figure
-% subplot(1,2,1)
-% plot(cm21_jet_trends_yrs, cm21_sam_trends_yrs, '*')
-% ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
-% xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
-% 
-% 
-% subplot(1,2,2)
-% plot(cm21_jet_loc_trends_yrs, cm21_sam_trends_yrs, '*')
-% set(gca, 'fontsize', 12)
-% set(gcf, 'position', [100, 100, 1049, 495])
-% xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+
+% CM2Mc
+
+figure
+subplot(1,2,1)
+plot(cm2mc_jet_trends_yrs, cm2mc_sam_trends_yrs, '*')
+ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
+xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
+
+
+subplot(1,2,2)
+plot(cm2mc_jet_loc_trends_yrs, cm2mc_sam_trends_yrs, '*')
+set(gca, 'fontsize', 12)
+set(gcf, 'position', [100, 100, 1049, 495])
+xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CM2Mc_scatter.eps')
+
+
+%% CM2.1
+
+
+figure
+subplot(1,2,1)
+plot(cm21_jet_trends_yrs, cm21_sam_trends_yrs, '*')
+ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
+xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
+
+
+subplot(1,2,2)
+plot(cm21_jet_loc_trends_yrs, cm21_sam_trends_yrs, '*')
+set(gca, 'fontsize', 12)
+set(gcf, 'position', [100, 100, 1049, 495])
+xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
+print('-depsc', 'CM21_scatter.eps')
+
