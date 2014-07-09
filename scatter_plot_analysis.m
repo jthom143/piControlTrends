@@ -676,13 +676,13 @@ print('-depsc', 'NOR_ESM1m_ME_scatter.eps')
 
 figure
 subplot(1,2,1)
-plot(cm2mc_jet_trends_yrs, cm2mc_sam_trends_yrs, '*')
+plot(cm2mc_jet_trends_yrs, cm2mc_sam_trends_yrs, 'g*')
 ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
 xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
 
 
 subplot(1,2,2)
-plot(cm2mc_jet_loc_trends_yrs, cm2mc_sam_trends_yrs, '*')
+plot(cm2mc_jet_loc_trends_yrs, cm2mc_sam_trends_yrs, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
@@ -694,13 +694,13 @@ print('-depsc', 'CM2Mc_scatter.eps')
 
 figure
 subplot(1,2,1)
-plot(cm21_jet_trends_yrs, cm21_sam_trends_yrs, '*')
+plot(cm21_jet_trends_yrs, cm21_sam_trends_yrs, 'g*')
 ylabel('SAM Trend (Pa/30 years)','fontsize', 12)
 xlabel('Jet Magnitude Trend (Pa/30 years)', 'fontsize', 12)
 
 
 subplot(1,2,2)
-plot(cm21_jet_loc_trends_yrs, cm21_sam_trends_yrs, '*')
+plot(cm21_jet_loc_trends_yrs, cm21_sam_trends_yrs, 'g*')
 set(gca, 'fontsize', 12)
 set(gcf, 'position', [100, 100, 1049, 495])
 xlabel('Jet Location Trend (^o Lat/30 years)', 'fontsize', 12)
